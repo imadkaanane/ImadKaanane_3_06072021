@@ -1,0 +1,199 @@
+@mixin localisation {
+    display: flex;
+    justify-content: center;
+    padding: $padding;
+    background-color: rgb(243, 243, 243);
+    font-size: 18px;
+}
+
+@mixin description {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin working-steps {
+    margin-left: $padding;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 2rem;
+    row-gap: 1rem;
+    list-style: none;
+    cursor: pointer;
+}
+
+@mixin step {
+    padding: $padding;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    transition-duration: 0.5s;
+}
+
+@mixin step-number {
+    background-color: #9356dc;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-left: -30px;
+}
+
+@mixin cards {
+    padding-top: $padding;
+    padding-bottom: $padding;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+@mixin card {
+    transition-duration: 0.5s;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+}
+
+@mixin card-img {
+    height: 190px;
+    width: 100%;
+    border: transparent solid 0px;
+    border-radius: 16px 16px 0 0;
+    box-shadow: none;
+    object-fit: cover;
+}
+
+@mixin card-badge {
+    background-color: $colorTertiary;
+    color: darken($colorTertiary, 50%);
+    padding: 8px;
+    border-radius: 5px;
+    position: absolute;
+    top: 16px;
+    right: 12px;
+}
+
+@mixin card-footer {
+    padding: $padding;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+@mixin bg-img {
+    max-width: 100%;
+    max-height: 520px;
+    width: 100%;
+    object-fit: cover;
+}
+
+@mixin menu {
+    top: -90px;
+    border-radius: 32px 32px 0 0;
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: relative;
+    padding: $padding;
+    margin-bottom: -90px;
+}
+
+@mixin menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin menu-item {
+    background-color: white;
+    padding: 16px;
+    display: flex;
+    border-radius: 12px;
+    margin: 16px 0;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    animation: menuAppear 1.5s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+    max-width: 100%;
+}
+
+@mixin menu-item-header {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+}
+
+@mixin menu-item-title {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin menu-item-description {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin  menu-item-price {
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 8px;
+}
+
+@mixin menu-item-confirmation {
+    background-color: $colorTertiary;
+    margin: -16px -80px -16px 16px;
+    width: 64px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition-duration: .5s;
+}
+
+@mixin menu-item-wrapicon {
+    height: 26px;
+    width: 26px;
+    background-color: white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius: 100px;
+    transform: rotate(-180deg);
+    transition-duration: 1s;
+}
+
+@mixin tablet {
+    @media screen and (min-width:map-get($breakpoints, tablet)){
+      @content;
+    }
+  }
+  @mixin desktop {
+    @media screen and (min-width:map-get($breakpoints, desktop)){
+      @content;
+    }
+  }
+  @mixin large {
+    @media screen and (min-width:map-get($breakpoints, large)){
+      @content;
+    }
+  }
+  
+  @mixin medium {
+    @media screen and (min-width: map-get($breakpoints, medium)) {
+      @content;
+    }
+  }

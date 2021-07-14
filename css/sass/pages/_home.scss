@@ -1,0 +1,119 @@
+
+.localisation {
+  @include localisation;
+
+  &__icon {
+    margin-right: 16px;
+  }
+
+  &__text {
+    font-weight: 700;
+  }
+}
+
+.description { 
+  @include description;
+
+  &__title {
+    padding: $padding;
+    text-align: center;
+  }
+
+  &__subtitle {
+    text-align: center;
+    padding-bottom: $padding;
+  }
+
+  &__btn {
+    padding: $padding;  
+  }
+}
+
+.working {
+
+  &__steps {
+    @include working-steps;
+    @include medium {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+
+  &__step {
+    
+    @include step;
+    &:hover{
+      transform: scale(1.03);
+      background-color: rgba(147, 86, 220, 0.15);
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+      transition-duration: 0.5s;
+    }
+    &:hover > i {
+      color: #9356dc;
+    }
+      
+    &--number{
+      @include step-number;
+    }    
+  }
+
+  &__text {
+    margin-left: 16px;
+  }    
+
+  &__icon {
+    margin-left: 16px;
+    color: #444;
+  } 
+}
+
+.restaurants {
+  background-color: #f6f6f6;  
+}
+  
+.cards {
+  
+  @include cards;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+  
+.card {
+
+  @include card;
+  
+  &:hover {  
+    transform: scale(1.03);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.50);
+  }
+
+  &__img {
+    @include card-img;
+  }
+
+  &__tag {
+    @include card-badge;
+  }
+
+  &__footer {
+    @include card-footer;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__btn {
+      border: none;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 4px;
+  }
+
+  &__subtitle {
+    margin: 0;
+  }
+}

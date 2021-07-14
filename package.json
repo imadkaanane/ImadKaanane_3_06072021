@@ -1,0 +1,25 @@
+{
+  "name": "imadkaanane_3_06072021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "sass --watch css/main.scss:css/main.css"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imadkaanane/ImadKaanane_3_06072021.git"
+  },
+  "author": "Imad Kaanane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imadkaanane/ImadKaanane_3_06072021/issues"
+  },
+  "homepage": "https://github.com/imadkaanane/ImadKaanane_3_06072021#readme",
+  "dependencies": {
+    "sass": "^1.35.1"
+  }
+}
+
+

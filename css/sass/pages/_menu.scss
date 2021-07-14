@@ -1,0 +1,127 @@
+.header {
+    &--withArrow {
+      position: relative;
+    }
+  
+    &__arrow {
+      position: absolute;
+      left: 32px;
+      height: 32px;
+      width: 32px;
+      top: 50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: black;
+    }
+}
+  
+.bgImg {
+    @include bg-img;
+}
+  
+.menu {
+    @include menu;
+  
+    &__header {
+        @include menu-header;
+    }
+  
+    &__title {
+      font-family: "Shrikhand", "cursive";
+    }
+}
+  
+.submenus {
+    display: grid;
+    padding-top: $padding;
+    padding-bottom: $padding;
+    @include medium {
+      grid-template-columns: repeat(3,1fr);
+      column-gap: 1rem;
+    }
+}
+  
+.submenu {
+    max-width: 100%;
+    overflow: hidden;
+ 
+  
+    &__title {
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 8px;
+      font-weight: normal;
+  
+        &::after {
+            content: "";
+            width: 48px;
+            height: 4px;
+            background-color: $colorTertiary;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
+  
+.menuItem {
+    @include menu-item;
+
+    &__header {
+        @include menu-item-header;
+    }
+  
+    &__title {
+        @include menu-item-title;
+    }
+  
+    &__description {
+        @include menu-item-description;
+    }
+  
+    &__price {
+        @include menu-item-price;
+    }
+  
+    &__confirmation {
+        @include menu-item-confirmation;
+    }
+  
+    &:hover &__confirmation {
+        margin-right: -16px;
+        transition-duration: .6s;
+    }
+  
+    &__wrapIcon {
+        @include menu-item-wrapicon;
+    }
+  
+    &:hover &__wrapIcon {
+        transform: rotate(0);
+    }
+  
+    &__icon {
+        color: $colorTertiary;
+    }
+}
+  
+@for $i from 0 to 10 {
+    .delay-#{$i} {
+      animation-delay:  #{ $i / 6 }s;
+    }    
+}
+.wrapBtn {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: $padding;
+}
+  
+.commandBtn {
+    text-decoration: none;
+    padding: 15px 75px;
+    cursor: pointer;
+}
