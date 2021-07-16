@@ -1,5 +1,6 @@
 .footer {
   background-color: #353535;
+  padding: $padding;
 
   &__container {
     display: flex;
@@ -13,7 +14,9 @@
     color: white;
     font-family: $fontTitle;
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
+    padding-bottom: $padding;
+    
   }
 
   &__list {
