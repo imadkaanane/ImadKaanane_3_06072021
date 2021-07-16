@@ -3,7 +3,7 @@
   @include localisation;
 
   &__icon {
-    margin-right: 16px;
+    margin-right: $margin;
   }
 
   &__text {
@@ -48,7 +48,7 @@
       transition-duration: 0.5s;
     }
     &:hover > i {
-      color: #9356dc;
+      color: $colorPrimary;
     }
       
     &--number{
@@ -57,17 +57,17 @@
   }
 
   &__text {
-    margin-left: 16px;
+    margin-left: $margin;
   }    
 
   &__icon {
-    margin-left: 16px;
+    margin-left: $margin;
     color: #444;
   } 
 }
 
 .restaurants {
-  background-color: #f6f6f6;  
+  background-color: $bgColor;  
 }
   
 .cards {

@@ -1,18 +1,17 @@
 .footer {
   background-color: #353535;
-  padding-bottom: 50px ;
- 
+
   &__container {
     display: flex;
     flex-direction: column;
     padding: $padding;
-    max-width: 1240px;
+    max-width: 1280px;
     margin: auto;
   }
   
   &__logo {
     color: white;
-    font-family: "Shrikhand", "cursive";
+    font-family: $fontTitle;
     margin: 0;
     font-size: 18px;
   }
@@ -24,7 +23,7 @@
   }
 
   &__listElement {
-    margin: 8px 0;
+    margin: ($padding/2) 0;
 
     &:first-child {
       margin-top: 0;
@@ -46,6 +45,6 @@
 
   &__icon {
     width: 18px;
-    margin-right: 8px;
+    margin-right: ($margin/2);
   }
 }

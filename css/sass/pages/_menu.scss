@@ -5,14 +5,13 @@
   
     &__arrow {
       position: absolute;
-      left: 32px;
+      left: 25px;
       height: 32px;
       width: 32px;
-      top: 50%;
+      top: 30%;
       display:flex;
       align-items:center;
       justify-content:center;
-      transform: translateY(-50%);
       font-size: 20px;
       color: black;
     }
@@ -30,7 +29,7 @@
     }
   
     &__title {
-      font-family: "Shrikhand", "cursive";
+      font-family: $fontTitle;
     }
 }
   
@@ -52,8 +51,8 @@
     &__title {
       text-transform: uppercase;
       position: relative;
-      padding-bottom: 8px;
-      font-weight: normal;
+      padding-bottom: ($padding / 2);
+      font-weight: bold;
   
         &::after {
             content: "";
@@ -91,7 +90,7 @@
     }
   
     &:hover &__confirmation {
-        margin-right: -16px;
+        margin-right: -$margin;
         transition-duration: .6s;
     }
   
@@ -115,13 +114,11 @@
 }
 .wrapBtn {
     display: flex;
-    text-decoration: none;
     justify-content: center;
     padding: $padding;
 }
   
 .commandBtn {
-    text-decoration: none;
-    padding: 15px 75px;
+    padding: 16px 75px;
     cursor: pointer;
 }
