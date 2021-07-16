@@ -184,6 +184,11 @@ body, html {
   align-items: center;
   background-color: #f6f6f6;
 }
+@media screen and (min-width: 1280px) {
+  .description {
+    background-color: transparent;
+  }
+}
 .description__title {
   padding: 16px;
   text-align: center;
@@ -248,10 +253,15 @@ body, html {
 .restaurants {
   background-color: #f6f6f6;
 }
+@media screen and (min-width: 1280px) {
+  .restaurants {
+    background-color: transparent;
+  }
+}
 
 .cards {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   column-gap: 2rem;
