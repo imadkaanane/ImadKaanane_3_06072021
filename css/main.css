@@ -166,10 +166,10 @@ body, html {
   justify-content: center;
   padding: 16px;
   background-color: #f3f3f3;
-  font-size: 18px;
 }
 .localisation__icon {
   margin-right: 16px;
+  font-size: 25px;
 }
 .localisation__text {
   font-weight: 700;
