@@ -1,3 +1,5 @@
+
+
 .header {
     &--withArrow {
       position: relative;
@@ -51,7 +53,7 @@
     &__title {
       text-transform: uppercase;
       position: relative;
-      padding-bottom: ($padding / 2);
+      padding-bottom: (math.div($padding, 2));
       font-weight: bold;
   
         &::after {
@@ -109,7 +111,7 @@
   
 @for $i from 0 to 10 {
     .delay-#{$i} {
-      animation-delay:  #{ $i / 6 }s;
+      animation-delay:  #{ math.div($i, 6) }s;
     }    
 }
 .wrapBtn {

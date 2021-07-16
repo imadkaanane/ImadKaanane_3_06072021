@@ -176,7 +176,7 @@ body, html {
 }
 
 .description {
-  margin-top: 20px;
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,6 +194,7 @@ body, html {
 }
 
 .working__steps {
+  margin-top: 16px;
   margin-left: 16px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
