@@ -16,7 +16,7 @@
 }
 
 @mixin working-steps {
-    margin-top: $margin;
+    margin-top: $margin * 2;
     margin-left: $margin;
     display: grid;
     grid-template-columns: repeat(1, 1fr);

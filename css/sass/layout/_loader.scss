@@ -5,7 +5,7 @@
   left: 0;
   top: 0;
   background-color: rgba(255, 255, 255, 0.90);
-  animation: loader 0.1s;
+  animation: loader 0.3s;
   animation-delay: 2s;
   animation-fill-mode: both;
   z-index: 2;
@@ -14,12 +14,13 @@
   justify-content:center;
   
   &__item {
-    animation: bounce 2s;
+    animation: bounce .75s;
     animation-iteration-count: 3;
+    font-family: $fontTitle;
 
     &Container {
-      margin: 15px;
-      font-size: 25px;  
+      margin: $margin *2;
+      font-size: 35px;  
       display: flex;
       width: 400px;
       justify-content: space-between;

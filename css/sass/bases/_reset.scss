@@ -13,7 +13,7 @@ body, html {
 
 .container {
     padding: $paddingContainer;
-    max-width: 1280px;
+    max-width: $widthContainer;
     margin: auto;
     margin-top: ($margin * 3);
 }
