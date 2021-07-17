@@ -12,6 +12,7 @@
   }
 }
 
+
 .description { 
   @include description;
   @include desktop {
@@ -25,16 +26,18 @@
 
   &__subtitle {
     text-align: center;
-    padding-bottom: $padding;
+    padding: $padding;
   }
 
   &__btn {
     padding: $padding;  
+    margin: $margin;
   }
 }
 
 .working {
-
+  padding-top: 0;
+  padding-bottom: 0;
   &__steps {
     @include working-steps;
     
@@ -88,6 +91,9 @@
 
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
+  }
+  @include desktop {
+     grid-template-columns: repeat(3, 1fr);
   }
 }
   
