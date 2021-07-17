@@ -37,7 +37,12 @@
 
   &__steps {
     @include working-steps;
-    @include medium {
+    
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+
+    @include desktop {
       grid-template-columns: repeat(3, 1fr); 
     }
   }
