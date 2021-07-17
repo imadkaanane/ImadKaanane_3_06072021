@@ -39,28 +39,29 @@
     <header class="header">
         <h1 class="header__logo">ohmyfood</h1>
     </header>
+
+    <section class="localisation">
+      <i class="fas fa-map-marker-alt localisation__icon"></i>
+      <h2><span class="localisation__text">Paris, Belleville</span></h2>
+    </section>
+
     <main>
 
-        <section class="localisation">
-            <i class="fas fa-map-marker-alt localisation__icon"></i>
-            <h2><span class="localisation__text">Paris, Belleville</span></h2>
+      <section class="description  paddingSection">
+          <h2 class="description__title">Réservez le menu qui<br>vous convient</h2>
+          <p class="description__subtitle">
+            Découvrez des restaurants d'exception, séléctionnés par nos soins
+          </p>
+          <button class="description__btn">
+            Explorer nos restaurants
+          </button>
         </section>
 
-        <section class="description container">
-            <h2 class="description__title">Réservez le menu qui<br>vous convient</h2>
-            <p class="description__subtitle">
-              Découvrez des restaurants d'exception, séléctionnés par nos soins
-            </p>
-            <button class="description__btn">
-              Explorer nos restaurants
-            </button>
-        </section>
-
-        <section class="working container">
-          
+        <section class="working paddingSection">
+        
           <h2 class="working__title">Fonctionnement</h2>
-          <div class="working__steps">
-            <div class="working__step  ">
+          <div class="working__steps container">
+            <div class="working__step ">
                 <span class="working__step--number">1</span>
                 <i class="working__icon fas fa-mobile-alt"></i>
                 <span class="working__text">Choisissez un restaurant</span>
@@ -76,14 +77,14 @@
                 <span class="working__text">Dégustez au restaurant</span>
             </div>
           </div>
-          
-        </section>
+        
+         </section>
 
-        <section class="restaurants container" id="restaurants">
+        <section class="restaurants paddingSection" id="restaurants">
             
           <h2 class="restaurants__title">Restaurants</h2>
           
-          <div class="cards">
+          <div class="cards container ">
             <a class="card " href="index_menu_1.html">
               <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" class="card__img">
               <span class="card__tag">Nouveau</span>
@@ -95,7 +96,7 @@
                 <div class="card__btn">
                     <span><i class="heartIcon far fa-heart fa-2x"></i></span>
                 </div>
-             </div>
+              </div>
             </a>
       
             <a class="card " href="index_menu_2.html">

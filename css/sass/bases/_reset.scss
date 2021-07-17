@@ -11,9 +11,25 @@ body, html {
     scroll-behavior: smooth;
 }
 
-.container {
-    padding: $paddingContainer;
+main {
     max-width: $widthContainer;
     margin: auto;
-    margin-top: ($margin * 3);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+    } 
+}
+
+.paddingSection {
+    padding: ($padding * 3) $padding;
 }

@@ -18,10 +18,7 @@
 @mixin working-steps {
     margin-top: $margin * 2;
     margin-left: $margin;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: 2rem;
-    row-gap: 2rem;
+    
     cursor: pointer;
 }
 
@@ -41,17 +38,13 @@
     background-color: $colorPrimary;
     color: white;
     border-radius: 50%;
-    padding: 4px 8px;
+    padding: math.div($padding, 4) math.div($padding, 2);
     margin-left: -($margin * 2);
 }
 
 @mixin cards {
     padding-top: $padding * 2;
     padding-bottom: $padding * 2;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: 2rem;
-    row-gap: 2rem;
 }
 
 @mixin card {
@@ -74,7 +67,7 @@
 @mixin card-badge {
     background-color: $colorTertiary;
     color: darken($colorTertiary, 50%);
-    padding: 8px;
+    padding: math.div($padding, 2);
     border-radius: 5px;
     position: absolute;
     top: 16px;
@@ -118,7 +111,7 @@
     padding: $padding;
     display: flex;
     border-radius: 12px;
-    margin: 16px 0;
+    margin: $margin 0;
     box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
@@ -154,7 +147,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-left: 8px;
+    padding-left: math.div($padding, 2);
 }
 
 @mixin menu-item-confirmation {

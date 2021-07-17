@@ -57,11 +57,30 @@ body, html {
   scroll-behavior: smooth;
 }
 
-.container {
-  padding: 48px 16px 48px 16px;
+main {
   max-width: 1280px;
   margin: auto;
-  margin-top: 48px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.paddingSection {
+  padding: 48px 16px;
 }
 
 .loader {
@@ -204,28 +223,10 @@ body, html {
   margin: 16px;
 }
 
-.working {
-  padding-top: 0;
-  padding-bottom: 0;
-}
 .working__steps {
   margin-top: 32px;
   margin-left: 16px;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  column-gap: 2rem;
-  row-gap: 2rem;
   cursor: pointer;
-}
-@media screen and (min-width: 768px) {
-  .working__steps {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 1280px) {
-  .working__steps {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 .working__step {
   padding: 16px;
@@ -274,20 +275,6 @@ body, html {
 .cards {
   padding-top: 32px;
   padding-bottom: 32px;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  column-gap: 2rem;
-  row-gap: 2rem;
-}
-@media screen and (min-width: 768px) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 1280px) {
-  .cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .card {
@@ -329,13 +316,10 @@ body, html {
 }
 .card__btn {
   border: none;
+  margin-top: -8px;
 }
 .card__title {
-  margin: 0;
   margin-bottom: 4px;
-}
-.card__subtitle {
-  margin: 0;
 }
 
 .header--withArrow {
@@ -566,6 +550,7 @@ button a {
 }
 
 .heartIcon {
+  font-size: 25px;
   cursor: pointer;
 }
 .heartIcon:hover {
