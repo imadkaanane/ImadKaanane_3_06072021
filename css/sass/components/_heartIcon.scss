@@ -4,8 +4,8 @@
     &:hover {
         animation: arise .6s ease-in-out;
         opacity: 1;
-        background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-        background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        background-color: rgb(104, 104, 104);
+        background-image: linear-gradient(0deg, color.scale($colorPrimary, $alpha: -10%) 0%, color.scale($colorSecondary, $alpha: -10%) 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;

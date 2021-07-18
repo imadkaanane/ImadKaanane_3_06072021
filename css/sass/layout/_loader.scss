@@ -4,14 +4,13 @@
   width: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.90);
+  background-color: $bgLoader;
   animation: loader 0.3s;
   animation-delay: 2s;
   animation-fill-mode: both;
   z-index: 2;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  @include flexRow;
+  @include center;
   
   &__item {
     animation: bounce .75s;
@@ -21,9 +20,9 @@
     &Container {
       margin: $margin *2;
       font-size: 35px;  
-      display: flex;
+     
       width: 400px;
-      justify-content: space-between;
+      @include flexRow;
       @include tablet {
         font-size: 50px;
       }

@@ -69,7 +69,11 @@
     }
       
     &--number{
-      @include step-number;
+      background-color: $colorPrimary;
+      color: white;
+      border-radius: 50%;
+      padding: math.div($padding, 4) math.div($padding, 2);
+      margin-left: -($margin * 2);
     }    
   }
 
@@ -97,7 +101,12 @@
 }
   
 .card {
-  @include card;
+  transition-duration: .5s;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
   
   &:hover {  
     transform: scale(1.03);
@@ -105,15 +114,28 @@
   }
 
   &__img {
-    @include card-img;
+    height: 190px;
+    width: 100%;
+    border: transparent solid 0px;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
   }
 
   &__tag {
-    @include card-badge;
+    background-color: $colorTertiary;
+    color: darken($colorTertiary, 50%);
+    padding: math.div($padding, 2);
+    border-radius: 5px;
+    position: absolute;
+    top: 16px;
+    right: 12px;
   }
 
   &__footer {
-    @include card-footer;
+    padding: $padding;
+    position: relative;
+    display: flex;
+    align-items: center;
   }
 
   &__content {

@@ -3,10 +3,11 @@ $colorPrimary: #9356DC;
 $colorSecondary: #FF79DA;
 $colorTertiary: #99E2D0;
 $bgColor: #f6f6f6;
+$bgLoader: rgba(255, 255, 255, 0.90);
 $white: #fff;
 $black: #000000;
 $transp: transparent;
-$gradient: linear-gradient($colorSecondary, $colorPrimary);
+
 
 // Marges et Tailles
 $margin: 16px;
