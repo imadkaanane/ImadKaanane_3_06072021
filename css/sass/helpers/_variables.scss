@@ -1,9 +1,20 @@
+// Colors
 $colorPrimary: #9356DC;
 $colorSecondary: #FF79DA;
 $colorTertiary: #99E2D0;
+$bgColor: #f6f6f6;
+$white: #fff;
+$black: #000000;
+$transp: transparent;
+$gradient: linear-gradient($colorSecondary, $colorPrimary);
+
+// Marges et Tailles
 $margin: 16px;
 $padding: 16px;
 $widthContainer: 1280px;
-$paddingContainer: 48px 16px 48px 16px;
+
+// Fonts
 $fontTitle: "Shrikhand", "cursive";
-$bgColor: #f6f6f6;
+$fontText: 'Roboto', sans-serif;
+
+

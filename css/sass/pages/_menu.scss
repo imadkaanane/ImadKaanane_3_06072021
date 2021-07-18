@@ -38,16 +38,7 @@
 }
   
 .submenus {
-    display: grid;
-   
-    @include medium {
-        grid-template-columns: repeat(2,1fr);
-        column-gap: 1rem;
-        row-gap: 2rem;
-    }
-    @include desktop {
-        grid-template-columns: repeat(3,1fr);
-    }
+    @include grid;
 }
   
 .submenu {
@@ -75,26 +66,48 @@
 }
   
 .menuItem {
-    @include menu-item;
+    @include flexRow;
+    background-color: white;
+    padding: $padding;
+    border-radius: 12px;
+    margin: $margin 0;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    animation: menuAppear 1.5s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+    max-width: 100%;
 
     &__header {
-        @include menu-item-header;
+        @include ellipsis;
+        flex: 1;
     }
   
     &__title {
-        @include menu-item-title;
+        @include ellipsis;
+        margin: 0;
     }
   
     &__description {
-        @include menu-item-description;
+        @include ellipsis;
+        margin: 0;
     }
   
     &__price {
-        @include menu-item-price;
+        font-weight: bold;
+        @include flexRow;
+        @include end;
+        padding-left: math.div($padding, 2);
     }
   
     &__confirmation {
-        @include menu-item-confirmation;
+        background-color: $colorTertiary;
+        margin: (-$margin) (-$margin * 5) (-$margin) ($margin);
+        width: 64px;
+        @include flexRow;
+        @include center;
+        transition-duration: .5s;
     }
   
     &:hover &__confirmation {
@@ -103,7 +116,14 @@
     }
   
     &__wrapIcon {
-        @include menu-item-wrapicon;
+        height: 26px;
+        width: 26px;
+        background-color: white;
+        @include flexRow;
+        @include center;
+        border-radius: 100px;
+        transform: rotate(-180deg);
+        transition-duration: 1s;
     }
   
     &:hover &__wrapIcon {
@@ -121,8 +141,8 @@
     }    
 }
 .wrapBtn {
-    display: flex;
-    justify-content: center;
+    @include flexRow;
+    @include center;
     padding: $padding * 3;
     padding-bottom: ($padding * 4);
 }

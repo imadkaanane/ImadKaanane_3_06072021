@@ -1,38 +1,48 @@
-@mixin localisation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: $padding;
-    background-color: rgba(228, 224, 224, 0.5);
-}
+// Flexbox
 
-@mixin description {
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: $bgColor;
-}
-
-@mixin working-steps {
-    margin-top: $margin * 2;
-    margin-left: $margin;
-    
-    cursor: pointer;
-}
-
-@mixin step {
-    padding: $padding;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
-    border-radius: 20px;
-    background-color: $bgColor;
+@mixin flexRow {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    transition-duration: 0.5s;
 }
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+// Grid system
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+    } 
+}
+
+// Alignement , positon.....
+@mixin center($justify: center, $align: center) {
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin start($justify: flex-start, $align: center) {
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin end($justify: flex-end, $align: flex-end) {
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
 
 @mixin step-number {
     background-color: $colorPrimary;
@@ -42,10 +52,6 @@
     margin-left: -($margin * 2);
 }
 
-@mixin cards {
-    padding-top: $padding * 2;
-    padding-bottom: $padding * 2;
-}
 
 @mixin card {
     transition-duration: .5s;
@@ -89,13 +95,13 @@
 }
 
 @mixin menu {
-    top: -120px;
+    top: -40px;
     border-radius: 32px 32px 0 0;
     background-color: $bgColor;
     z-index: 1;
     position: relative;
     padding: 0;
-    margin-bottom: -120px;
+    margin-bottom: -40px;
 }
 
 @mixin menu-header {
@@ -106,71 +112,16 @@
     justify-content: space-between;
 }
 
-@mixin menu-item {
-    background-color: white;
-    padding: $padding;
-    display: flex;
-    border-radius: 12px;
-    margin: $margin 0;
-    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    cursor: pointer;
-    animation: menuAppear 1.5s;
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-    animation-fill-mode: both;
-    max-width: 100%;
-}
 
-@mixin menu-item-header {
+@mixin ellipsis {
     white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
-    flex: 1;
-}
-
-@mixin menu-item-title {
-    margin: 0;
-    white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
 }
 
-@mixin menu-item-description {
-    margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
 
-@mixin  menu-item-price {
-    font-weight: bold;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-left: math.div($padding, 2);
-}
 
-@mixin menu-item-confirmation {
-    background-color: $colorTertiary;
-    margin: -16px -80px -16px 16px;
-    width: 64px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition-duration: .5s;
-}
-
-@mixin menu-item-wrapicon {
-    height: 26px;
-    width: 26px;
-    background-color: white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius: 100px;
-    transform: rotate(-180deg);
-    transition-duration: 1s;
-}
+// Media Queries
 
 @mixin tablet {
     @media screen and (min-width:map-get($breakpoints, tablet)){

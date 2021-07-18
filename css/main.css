@@ -62,23 +62,6 @@ main {
   margin: auto;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  column-gap: 2rem;
-  row-gap: 2rem;
-}
-@media screen and (min-width: 768px) {
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 1280px) {
-  .container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .paddingSection {
   padding: 48px 16px;
 }
@@ -184,11 +167,12 @@ main {
 }
 
 .localisation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 16px;
   background-color: rgba(228, 224, 224, 0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .localisation__icon {
   margin-right: 16px;
@@ -199,12 +183,11 @@ main {
 }
 
 .description {
-  margin-top: 0;
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background-color: #f6f6f6;
+  align-items: center;
 }
 @media screen and (min-width: 1280px) {
   .description {
@@ -224,19 +207,33 @@ main {
 }
 
 .working__steps {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
   margin-top: 32px;
   margin-left: 16px;
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  .working__steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .working__steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .working__step {
-  padding: 16px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
-  border-radius: 20px;
-  background-color: #f6f6f6;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  padding: 16px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
+  background-color: #f6f6f6;
   transition-duration: 0.5s;
 }
 .working__step:hover {
@@ -273,8 +270,22 @@ main {
 }
 
 .cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .card {
@@ -287,7 +298,7 @@ main {
 }
 .card:hover {
   transform: scale(1.03);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
 }
 .card__img {
   height: 190px;
@@ -346,13 +357,13 @@ main {
 }
 
 .menu {
-  top: -120px;
+  top: -40px;
   border-radius: 32px 32px 0 0;
   background-color: #f6f6f6;
   z-index: 1;
   position: relative;
   padding: 0;
-  margin-bottom: -120px;
+  margin-bottom: -40px;
 }
 .menu__header {
   padding: 16px;
@@ -370,12 +381,13 @@ main {
 
 .submenus {
   display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .submenus {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 1rem;
-    row-gap: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -406,9 +418,10 @@ main {
 }
 
 .menuItem {
+  display: flex;
+  flex-direction: row;
   background-color: white;
   padding: 16px;
-  display: flex;
   border-radius: 12px;
   margin: 16px 0;
   box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
@@ -421,25 +434,26 @@ main {
 }
 .menuItem__header {
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
   flex: 1;
 }
 .menuItem__title {
-  margin: 0;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
 }
 .menuItem__description {
-  margin: 0;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
 }
 .menuItem__price {
   font-weight: bold;
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
   padding-left: 8px;
@@ -449,8 +463,9 @@ main {
   margin: -16px -80px -16px 16px;
   width: 64px;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   transition-duration: 0.5s;
 }
 .menuItem:hover .menuItem__confirmation {
@@ -462,8 +477,9 @@ main {
   width: 26px;
   background-color: white;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   border-radius: 100px;
   transform: rotate(-180deg);
   transition-duration: 1s;
@@ -517,7 +533,9 @@ main {
 
 .wrapBtn {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   padding: 48px;
   padding-bottom: 64px;
 }
