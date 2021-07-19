@@ -3,14 +3,14 @@
   padding: $padding;
 
   &__container {
-    @include flexColumn;
+    @include flex(column);
     padding: $padding;
     max-width: $widthContainer;
     margin: auto;
   }
   
   &__logo {
-    color: white;
+    color: $white;
     font-family: $fontTitle;
     margin: 0;
     font-size: 20px;
@@ -37,7 +37,7 @@
   }
 
   &__link {
-    color: white;
+    color: $white;
     text-decoration: none;
 
     &:hover {

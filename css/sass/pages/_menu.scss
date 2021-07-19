@@ -36,9 +36,8 @@
     &__header {
         padding: $padding;
         padding-top: $padding * 2;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex;
+        @include center(space-between, center);
     }
   
     &__title {
@@ -79,7 +78,7 @@
 }
   
 .menuItem {
-    @include flexRow;
+    @include flex;
     @include box-shadow;
     background-color: $white;
     padding: $padding;
@@ -112,8 +111,8 @@
   
     &__price {
         font-weight: bold;
-        @include flexRow;
-        @include end;
+        @include flex;
+        @include center(flex-end, flex-end);
         padding-left: math.div($padding, 2);
     }
   
@@ -121,7 +120,7 @@
         background-color: $colorTertiary;
         margin: (-$margin) (-$margin * 5) (-$margin) ($margin);
         width: 64px;
-        @include flexRow;
+        @include flex;
         @include center;
         transition-duration: .5s;
     }
@@ -135,7 +134,7 @@
         height: 26px;
         width: 26px;
         background-color: $white;
-        @include flexRow;
+        @include flex;
         @include center;
         border-radius: 100px;
         transform: rotate(-180deg);
@@ -150,14 +149,15 @@
         color: $colorTertiary;
     }
 }
-  
-@for $i from 0 to 10 {
+
+@for $i from 1 through $num-load {
     .delay-#{$i} {
-      animation-delay:  #{ math.div($i, 6) }s;
-    }    
+        animation-delay: $anim-delay * $i;
+    }
 }
+
 .wrapBtn {
-    @include flexRow;
+    @include flex;
     @include center;
     padding: $padding * 3;
     padding-bottom: ($padding * 4);

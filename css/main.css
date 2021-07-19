@@ -93,9 +93,8 @@ main {
   width: 400px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .loader__itemContainer {
@@ -138,7 +137,7 @@ main {
   margin: auto;
 }
 .footer__logo {
-  color: white;
+  color: #fff;
   font-family: "Shrikhand", "cursive";
   margin: 0;
   font-size: 20px;
@@ -159,7 +158,7 @@ main {
   margin-bottom: 0;
 }
 .footer__link {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 .footer__link:hover {
@@ -374,8 +373,9 @@ main {
   padding: 16px;
   padding-top: 32px;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .menu__title {
   font-family: "Shrikhand", "cursive";
@@ -502,44 +502,44 @@ main {
   color: #99E2D0;
 }
 
-.delay-0 {
-  animation-delay: 0s;
-}
-
 .delay-1 {
-  animation-delay: 0.1666666667s;
+  animation-delay: 200ms;
 }
 
 .delay-2 {
-  animation-delay: 0.3333333333s;
+  animation-delay: 400ms;
 }
 
 .delay-3 {
-  animation-delay: 0.5s;
+  animation-delay: 600ms;
 }
 
 .delay-4 {
-  animation-delay: 0.6666666667s;
+  animation-delay: 800ms;
 }
 
 .delay-5 {
-  animation-delay: 0.8333333333s;
+  animation-delay: 1000ms;
 }
 
 .delay-6 {
-  animation-delay: 1s;
+  animation-delay: 1200ms;
 }
 
 .delay-7 {
-  animation-delay: 1.1666666667s;
+  animation-delay: 1400ms;
 }
 
 .delay-8 {
-  animation-delay: 1.3333333333s;
+  animation-delay: 1600ms;
 }
 
 .delay-9 {
-  animation-delay: 1.5s;
+  animation-delay: 1800ms;
+}
+
+.delay-10 {
+  animation-delay: 2000ms;
 }
 
 .wrapBtn {

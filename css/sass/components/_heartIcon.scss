@@ -4,7 +4,7 @@
     &:hover {
         animation: arise .6s ease-in-out;
         opacity: 1;
-        background-color: rgb(104, 104, 104);
+        background-color: $bgButton;
         background-image: $bgLinear;
         @include back-gradient-clip;
         font-weight: bold;

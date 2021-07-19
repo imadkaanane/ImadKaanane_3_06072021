@@ -1,7 +1,7 @@
 .localisation {
   padding: $padding;
   background-color: rgba(228, 224, 224, 0.5);
-  @include flexRow;
+  @include flex;
   @include center;
 
   &__icon {
@@ -16,7 +16,7 @@
 
 .description { 
   background-color: $bgColor;
-  @include flexColumn;
+  @include flex(column);
   @include center;
   
   @include desktop {
@@ -49,8 +49,8 @@
   }
 
   &__step {
-    @include flexRow;
-    @include start;
+    @include flex;
+    @include center(flex-start, center);
     @include box-shadow; 
     border-radius: 20px;
     background-color: $bgColor;

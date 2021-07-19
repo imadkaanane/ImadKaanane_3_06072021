@@ -9,7 +9,7 @@
   animation-delay: 2s;
   animation-fill-mode: both;
   z-index: 2;
-  @include flexRow;
+  @include flex;
   @include center;
 
   
@@ -22,9 +22,8 @@
       margin: $margin *2;
       font-size: 35px;  
       width: 400px;
-      @include flexRow;
-      @include center;
-      @include space-between;
+      @include flex;
+      @include center(space-between, center);
       @include tablet {
         font-size: 50px;
       }

@@ -1,14 +1,10 @@
 // Flexbox
 
-@mixin flexRow {
+@mixin flex($direction: row) {
     display: flex;
-    flex-direction: row;
+    flex-direction: $direction;
 }
 
-@mixin flexColumn {
-    display: flex;
-    flex-direction: column;
-}
 
 // Grid system
 
@@ -32,19 +28,6 @@
     align-items: $align;
 }
 
-@mixin start($justify: flex-start, $align: center) {
-    justify-content: $justify;
-    align-items: $align;
-}
-
-@mixin end($justify: flex-end, $align: flex-end) {
-    justify-content: $justify;
-    align-items: $align;
-}
-
-@mixin space-between($justify: space-between) {
-    justify-content: $justify; 
-}
 
 // Shadow
 @mixin box-shadow {

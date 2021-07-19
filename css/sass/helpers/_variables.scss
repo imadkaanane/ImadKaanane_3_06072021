@@ -4,6 +4,7 @@ $colorSecondary: #FF79DA;
 $colorTertiary: #99E2D0;
 $bgLinear: linear-gradient(0deg, color.scale($colorPrimary, $alpha: -10%) 0%, color.scale($colorSecondary, $alpha: -10%) 100%);
 $bgColor: #f6f6f6;
+$bgButton: rgb(104, 104, 104);
 $bgLoader: rgba(255, 255, 255, 0.90);
 $white: #fff;
 $black: #000000;
@@ -19,4 +20,8 @@ $widthContainer: 1280px;
 $fontTitle: "Shrikhand", "cursive";
 $fontText: 'Roboto', sans-serif;
 
+// Animations
+$num-load: 10;
+$anim-dur: 2000ms;
+$anim-delay: math.div($anim-dur, $num-load);
 
