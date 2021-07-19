@@ -2,6 +2,7 @@
 $colorPrimary: #9356DC;
 $colorSecondary: #FF79DA;
 $colorTertiary: #99E2D0;
+$bgLinear: linear-gradient(0deg, color.scale($colorPrimary, $alpha: -10%) 0%, color.scale($colorSecondary, $alpha: -10%) 100%);
 $bgColor: #f6f6f6;
 $bgLoader: rgba(255, 255, 255, 0.90);
 $white: #fff;

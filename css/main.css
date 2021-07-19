@@ -93,6 +93,9 @@ main {
   width: 400px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 @media screen and (min-width: 768px) {
   .loader__itemContainer {
@@ -231,24 +234,24 @@ main {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: 16px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  transition-duration: 0.5s;
   border-radius: 20px;
   background-color: #f6f6f6;
-  transition-duration: 0.5s;
+  padding: 16px;
 }
 .working__step:hover {
   transform: scale(1.03);
-  background-color: rgba(147, 86, 220, 0.15);
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
   transition-duration: 0.5s;
+  background-color: rgba(147, 86, 220, 0.15);
 }
 .working__step:hover > i {
   color: #9356DC;
 }
 .working__step--number {
   background-color: #9356DC;
-  color: white;
+  color: #fff;
   border-radius: 50%;
   padding: 4px 8px;
   margin-left: -32px;
@@ -290,8 +293,8 @@ main {
 }
 
 .card {
-  transition-duration: 0.5s;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  transition-duration: 0.5s;
   border-radius: 16px;
   position: relative;
   text-decoration: none;
@@ -300,6 +303,7 @@ main {
 .card:hover {
   transform: scale(1.03);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
+  transition-duration: 0.5s;
 }
 .card__img {
   height: 190px;
@@ -421,17 +425,23 @@ main {
 .menuItem {
   display: flex;
   flex-direction: row;
-  background-color: white;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  transition-duration: 0.5s;
+  background-color: #fff;
   padding: 16px;
   border-radius: 12px;
   margin: 16px 0;
-  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
   animation: menuAppear 1.5s;
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   animation-fill-mode: both;
   max-width: 100%;
+}
+.menuItem:hover {
+  transform: scale(1.03);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
+  transition-duration: 0.5s;
 }
 .menuItem__header {
   white-space: nowrap;
@@ -476,14 +486,14 @@ main {
 .menuItem__wrapIcon {
   height: 26px;
   width: 26px;
-  background-color: white;
+  background-color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 100px;
   transform: rotate(-180deg);
-  transition-duration: 1s;
+  transition-duration: 0.75s;
 }
 .menuItem:hover .menuItem__wrapIcon {
   transform: rotate(0);
@@ -551,21 +561,21 @@ button {
   font-weight: 500;
   font-size: 18px;
   border-radius: 100px;
-  color: white;
+  color: #fff;
   background-color: #686868;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
   cursor: pointer;
-  transition-duration: 0.5s;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  transition-duration: 0.5s;
 }
 button:hover {
-  background-color: white;
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
-  transform: scale(1.04);
+  background-color: #fff;
+  transform: scale(1.03);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
+  transition-duration: 0.5s;
 }
 button a {
   text-decoration: none;
-  color: white;
 }
 
 .heartIcon {
@@ -577,10 +587,10 @@ button a {
   opacity: 1;
   background-color: #686868;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
-  background-clip: text;
   -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -ms-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-weight: bold;
   transform: scale(1.05);
 }

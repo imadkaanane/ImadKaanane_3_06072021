@@ -5,11 +5,8 @@
         animation: arise .6s ease-in-out;
         opacity: 1;
         background-color: rgb(104, 104, 104);
-        background-image: linear-gradient(0deg, color.scale($colorPrimary, $alpha: -10%) 0%, color.scale($colorSecondary, $alpha: -10%) 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        -webkit-text-fill-color:transparent;
+        background-image: $bgLinear;
+        @include back-gradient-clip;
         font-weight: bold;
         transform: scale(1.05);
     }

@@ -80,17 +80,20 @@
   
 .menuItem {
     @include flexRow;
-    background-color: white;
+    @include box-shadow;
+    background-color: $white;
     padding: $padding;
     border-radius: 12px;
     margin: $margin 0;
-    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
     animation: menuAppear 1.5s;
     animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
     animation-fill-mode: both;
     max-width: 100%;
+    &:hover {
+        @include box-shadow-hover;
+    }
 
     &__header {
         @include ellipsis;
@@ -131,12 +134,12 @@
     &__wrapIcon {
         height: 26px;
         width: 26px;
-        background-color: white;
+        background-color: $white;
         @include flexRow;
         @include center;
         border-radius: 100px;
         transform: rotate(-180deg);
-        transition-duration: 1s;
+        transition-duration: .75s;
     }
   
     &:hover &__wrapIcon {

@@ -42,8 +42,30 @@
     align-items: $align;
 }
 
+@mixin space-between($justify: space-between) {
+    justify-content: $justify; 
+}
 
+// Shadow
+@mixin box-shadow {
+  box-shadow: 04px 4px 10px rgba(0, 0, 0, 0.25);
+  transition-duration: .5s;
+  
+}
 
+@mixin box-shadow-hover {
+  transform: scale(1.03);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
+  transition-duration: .5s;
+}
+
+//
+@mixin back-gradient-clip {
+  -webkit-background-clip: text;
+  -ms-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
 @mixin ellipsis {
     white-space: nowrap;

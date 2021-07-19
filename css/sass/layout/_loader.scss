@@ -11,6 +11,7 @@
   z-index: 2;
   @include flexRow;
   @include center;
+
   
   &__item {
     animation: bounce .75s;
@@ -20,9 +21,10 @@
     &Container {
       margin: $margin *2;
       font-size: 35px;  
-     
       width: 400px;
       @include flexRow;
+      @include center;
+      @include space-between;
       @include tablet {
         font-size: 50px;
       }
