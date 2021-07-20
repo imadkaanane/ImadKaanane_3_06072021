@@ -1,6 +1,6 @@
 .localisation {
   padding: $padding;
-  background-color: rgba(228, 224, 224, 0.5);
+  background-color: $bgLocal;
   @include flex;
   @include center;
 
@@ -25,11 +25,11 @@
 
   &__title {
     padding: $padding;
-    text-align: center;
+    @include text-center;
   }
 
   &__subtitle {
-    text-align: center;
+    @include text-center;
 
   }
 
@@ -101,7 +101,7 @@
 .card {
   @include box-shadow;
   border-radius: 16px;
-  position: relative;
+  @include position(relative);
   text-decoration: none;
   color: inherit;
   
@@ -122,16 +122,16 @@
     color: darken($colorTertiary, 50%);
     padding: math.div($padding, 2);
     border-radius: 5px;
-    position: absolute;
+    @include position(absolute);
     top: 16px;
     right: 12px;
   }
 
   &__footer {
     padding: $padding;
-    position: relative;
-    display: flex;
-    align-items: center;
+    @include position(relative);
+    @include flex;
+    @include center (flex-start, center);
   }
 
   &__content {

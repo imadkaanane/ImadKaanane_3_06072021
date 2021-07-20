@@ -10,11 +10,10 @@ button {
   @include box-shadow;
 
   &:hover {
+    transition: box-shadow 400ms;
     background-color: $white;
     @include box-shadow-hover;
   }
 
-  a {
-    text-decoration: none;
-  }
+
 }
