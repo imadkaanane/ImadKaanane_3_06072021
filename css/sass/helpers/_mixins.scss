@@ -44,9 +44,9 @@
 }
 
 @mixin box-shadow-hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
-  transition-duration: .5s;
+  transition-duration: .75s;
 }
 
 //

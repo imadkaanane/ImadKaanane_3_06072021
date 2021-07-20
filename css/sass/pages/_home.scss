@@ -18,7 +18,6 @@
   background-color: $bgColor;
   @include flex(column);
   @include center;
-  
   @include desktop {
     background-color: $transp; 
  }
@@ -30,7 +29,6 @@
 
   &__subtitle {
     @include text-center;
-
   }
 
   &__btn {
@@ -40,7 +38,6 @@
 }
 
 .working {
-  
   &__steps {
     @include grid;
     margin-top: $margin * 2;
@@ -59,11 +56,13 @@
     &:hover{
       @include box-shadow-hover;
       background-color: rgba(147, 86, 220, 0.15);
-
     }
 
     &:hover > i {
       color: $colorPrimary;
+    }
+    &:hover > span {
+      font-weight: bold;
     }
       
     &--number{
@@ -81,6 +80,7 @@
 
   &__icon {
     margin-left: $margin;
+    font-size: 1.2rem;
     color: #444;
   } 
 }
@@ -144,7 +144,6 @@
   }
 
   &__title {
-    
     margin-bottom: math.div($margin, 4);
   }
 

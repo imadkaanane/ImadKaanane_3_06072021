@@ -85,12 +85,14 @@
     margin: $margin 0;
     overflow: hidden;
     cursor: pointer;
-    animation: menuAppear 1.5s;
+    animation: menuAppear 1.75s;
     animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
     animation-fill-mode: both;
     max-width: 100%;
+
     &:hover {
         @include box-shadow-hover;
+        animation-fill-mode: none;
     }
 
     &__header {
