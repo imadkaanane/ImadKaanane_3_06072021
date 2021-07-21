@@ -119,7 +119,7 @@
     color: darken($colorTertiary, 50%);
     padding: math.div($padding, 2);
     border-radius: 5px;
-    @include position(absolute, 16px, 84%);
+    @include position-right(absolute, 16px, 12px);
 
   }
 
