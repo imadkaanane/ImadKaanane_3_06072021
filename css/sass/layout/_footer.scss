@@ -46,7 +46,7 @@
   }
 
   &__icon {
-    width: 18px;
+    @include block(18px, auto);
     margin-right: math.div($margin, 2);
   }
 }

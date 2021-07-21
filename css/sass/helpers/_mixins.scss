@@ -43,6 +43,60 @@
   justify-content: center;
 }
 
+// Fonts 
+@mixin font-size($size: 25px) {
+  font-size: $size;
+}
+
+@mixin font-weight($weight: bold) {
+  font-weight: $weight;
+}
+
+// Largeurs,  longueurs
+
+@mixin block($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// Borders
+@mixin border-radius-button($value: map-get($radius, borderButton)) {
+  border-radius: $value;
+}
+
+@mixin border-radius-step($value: map-get($radius, borderStep)) {
+  border-radius: $value;
+}
+
+@mixin border-radius-number($value: map-get($radius, borderNumber)) {
+  border-radius: $value;
+}
+
+@mixin border-radius-card($value: map-get($radius, borderCard)) {
+  border-radius: $value;
+}
+
+@mixin border-radius-img($value: map-get($radius, borderImg)) {
+  border-radius: $value;
+}
+
+@mixin border-radius-tag($value: map-get($radius, borderTag)) {
+  border-radius: $value;
+}
+
+@mixin border-radius-menu($value: map-get($radius, borderMenu)) {
+  border-radius: $value;
+}
+
+@mixin border-radius-menuItem($value: map-get($radius, borderMenuItem)) {
+  border-radius: $value;
+}
+
+@mixin border-radius-WrapIcon($value: map-get($radius, borderWrapIcon)) {
+  border-radius: $value;
+}
+
+
 // Shadow
 @mixin box-shadow {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
@@ -55,14 +109,6 @@
   transition-duration: .75s;
 }
 
-// Fonts 
-@mixin font-size($size: 25px) {
-  font-size: $size;
-}
-
-@mixin font-weight($weight: bold) {
-  font-weight: $weight;
-}
 
 //
 @mixin back-gradient-clip {

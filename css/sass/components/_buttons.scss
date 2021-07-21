@@ -2,7 +2,7 @@ button {
   border: 0;
   font-weight: 500;
   font-size: 18px;
-  border-radius: 100px;
+  @include border-radius-button;
   color: $white;
   @include bg-button;
   cursor: pointer;

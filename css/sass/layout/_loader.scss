@@ -1,7 +1,6 @@
 .loader {
   @include position(fixed, 0, 0);
-  height: 100%;
-  width: 100%;
+  @include block(100%, 100%);
   background-color: $bgLoader;
   animation: loader 0.3s;
   animation-delay: 2s;
@@ -20,7 +19,7 @@
       width: 400px;
       @include flex(row, space-between, center);
       @include tablet {
-        font-size: 50px;
+        @include font-size(50px);
       }
     }
 
