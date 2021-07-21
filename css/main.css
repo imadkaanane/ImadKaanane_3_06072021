@@ -72,10 +72,10 @@ main {
 
 .loader {
   position: fixed;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
-  left: 0;
-  top: 0;
   background-color: rgba(255, 255, 255, 0.9);
   animation: loader 0.3s;
   animation-delay: 2s;
@@ -121,6 +121,8 @@ main {
   padding: 16px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
   position: relative;
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 .header__logo {
@@ -272,7 +274,7 @@ main {
 }
 .working__icon {
   margin-left: 16px;
-  font-size: 1.2rem;
+  font-size: 20px;
   color: #444;
 }
 
@@ -309,6 +311,8 @@ main {
   transition-duration: 0.5s;
   border-radius: 16px;
   position: relative;
+  top: 0;
+  left: 0;
   text-decoration: none;
   color: inherit;
 }
@@ -331,11 +335,13 @@ main {
   border-radius: 5px;
   position: absolute;
   top: 16px;
-  right: 12px;
+  left: 84%;
 }
 .card__footer {
   padding: 16px;
   position: relative;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -354,12 +360,14 @@ main {
 
 .header--withArrow {
   position: relative;
+  top: 0;
+  left: 0;
 }
 .header__arrow {
   font-size: 25px;
   position: absolute;
-  left: 25px;
   top: 35%;
+  left: 25px;
   color: #000000;
 }
 
@@ -375,6 +383,7 @@ main {
   margin-bottom: -48px;
   position: relative;
   top: -48px;
+  left: 0;
   border-radius: 32px 32px 0 0;
   background-color: #f6f6f6;
   z-index: 1;
@@ -420,6 +429,8 @@ main {
   text-transform: uppercase;
   font-weight: bold;
   position: relative;
+  top: 0;
+  left: 0;
   padding-bottom: 8px;
 }
 .submenu__title::after {
@@ -428,8 +439,10 @@ main {
   height: 4px;
   background-color: #99E2D0;
   position: absolute;
+  top: 25px;
   left: 0;
-  bottom: 0;
+  left: 0;
+  top: 25px;
 }
 
 .menuItem {
@@ -464,12 +477,14 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0;
+  padding-bottom: 4px;
 }
 .menuItem__description {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0;
+  padding-top: 4px;
 }
 .menuItem__price {
   font-weight: bold;

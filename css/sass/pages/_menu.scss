@@ -1,14 +1,11 @@
 .header {
     &--withArrow {
-      @include position(relative);
+      @include position(relative, 0, 0);
     }
   
     &__arrow {
         @include font-size;
-        @include position(absolute);
-        left: 25px;
-        top: 35%;  
-        
+        @include position(absolute, 35%, 25px); 
         color: $black;
     }
 }
@@ -23,8 +20,7 @@
 .menu {
     padding: 0;
     margin-bottom: -$margin * 3;
-    @include position(relative);
-    top: -48px;
+    @include position(relative, -48px, 0);
     border-radius: 32px 32px 0 0;
     background-color: $bgColor;
     z-index: 1;
@@ -60,7 +56,7 @@
     &__title {
       text-transform: uppercase;
       @include font-weight;
-      @include position(relative);
+      @include position(relative, 0, 0);
       padding-bottom: (math.div($padding, 2));
   
         &::after {
@@ -68,9 +64,9 @@
             width: 48px;
             height: 4px;
             background-color: $colorTertiary;
-            @include position(absolute);
+            @include position(absolute, 25px, 0);
             left: 0;
-            bottom: 0;
+            top: 25px;
         }
     }
 }
@@ -102,11 +98,13 @@
     &__title {
         @include ellipsis;
         margin: 0;
+        padding-bottom: math.div($padding, 4);
     }
   
     &__description {
         @include ellipsis;
         margin: 0;
+        padding-top: math.div($padding, 4);
     }
   
     &__price {

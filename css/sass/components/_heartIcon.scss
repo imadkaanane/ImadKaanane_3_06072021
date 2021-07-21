@@ -1,5 +1,5 @@
 .heartIcon {
-    font-size: 25px;
+    @include font-size;
     cursor: pointer;
     &:hover {
         animation: arise .6s ease-in-out;

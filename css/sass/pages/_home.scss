@@ -5,11 +5,11 @@
 
   &__icon {
     margin-right: $margin;
-    font-size: 25px;
+    @include font-size;
   }
 
   &__text {
-    font-weight: 700;
+    @include font-weight(700);
   }
 }
 
@@ -77,7 +77,7 @@
 
   &__icon {
     margin-left: $margin;
-    font-size: 1.2rem;
+    @include font-size(20px);
     color: #444;
   } 
 }
@@ -98,7 +98,7 @@
 .card {
   @include box-shadow;
   border-radius: 16px;
-  @include position(relative);
+  @include position(relative, 0, 0);
   text-decoration: none;
   color: inherit;
   
@@ -119,14 +119,13 @@
     color: darken($colorTertiary, 50%);
     padding: math.div($padding, 2);
     border-radius: 5px;
-    @include position(absolute);
-    top: 16px;
-    right: 12px;
+    @include position(absolute, 16px, 84%);
+
   }
 
   &__footer {
     padding: $padding;
-    @include position(relative);
+    @include position(relative, 0, 0);
     @include flex(row, flex-start, center);
   }
 
