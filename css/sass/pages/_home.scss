@@ -1,8 +1,7 @@
 .localisation {
   padding: $padding;
   background-color: $bgLocal;
-  @include flex;
-  @include center;
+  @include flex(row, center, center);
 
   &__icon {
     margin-right: $margin;
@@ -16,8 +15,7 @@
 
 .description { 
   background-color: $bgColor;
-  @include flex(column);
-  @include center;
+  @include flex(column, center, center);
   @include desktop {
     background-color: $transp; 
  }
@@ -46,8 +44,7 @@
   }
 
   &__step {
-    @include flex;
-    @include center(flex-start, center);
+    @include flex(row, flex-start, center);
     @include box-shadow; 
     border-radius: 20px;
     background-color: $bgColor;
@@ -62,7 +59,7 @@
       color: $colorPrimary;
     }
     &:hover > span {
-      font-weight: bold;
+      @include font-weight;
     }
       
     &--number{
@@ -130,8 +127,7 @@
   &__footer {
     padding: $padding;
     @include position(relative);
-    @include flex;
-    @include center (flex-start, center);
+    @include flex(row, flex-start, center);
   }
 
   &__content {

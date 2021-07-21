@@ -9,9 +9,7 @@
   animation-delay: 2s;
   animation-fill-mode: both;
   z-index: 2;
-  @include flex;
-  @include center;
-
+  @include flex(row, center, center);
   
   &__item {
     animation: bounce .75s;
@@ -22,8 +20,7 @@
       margin: $margin *2;
       font-size: 35px;  
       width: 400px;
-      @include flex;
-      @include center(space-between, center);
+      @include flex(row, space-between, center);
       @include tablet {
         font-size: 50px;
       }

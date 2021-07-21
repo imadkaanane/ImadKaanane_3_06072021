@@ -4,13 +4,12 @@ button {
   font-size: 18px;
   border-radius: 100px;
   color: $white;
-  background-color: $bgButton;
-  background-image: $bgLinear;
+  @include bg-button;
   cursor: pointer;
   @include box-shadow;
 
   &:hover {
-    transition: box-shadow 400ms;
+    
     background-color: $white;
     @include box-shadow-hover;
   }

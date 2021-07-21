@@ -1,8 +1,10 @@
 // Flexbox
 
-@mixin flex($direction: row) {
+@mixin flex($direction, $justify, $align) {
     display: flex;
     flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
 }
 
 
@@ -23,10 +25,6 @@
 }
 
 // Alignement , positon.....
-@mixin center($justify: center, $align: center) {
-    justify-content: $justify;
-    align-items: $align;
-}
 
 @mixin position ($pos){
   position: $pos; 
@@ -49,12 +47,21 @@
   transition-duration: .75s;
 }
 
+// Fonts 
+@mixin font-size($size: 25px) {
+  font-size: $size;
+}
+
+@mixin font-weight($weight: bold) {
+  font-weight: $weight;
+}
+
 //
 @mixin back-gradient-clip {
   -webkit-background-clip: text;
   -ms-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: $transp;
 }
 
 @mixin ellipsis {
@@ -63,6 +70,17 @@
     text-overflow: ellipsis;
 }
 
+// Background
+@mixin bg-button {
+  background-color: $bgButton;
+  background-image: $bgLinear;
+}
+
+
+// Animations and transitions 
+@mixin transition {
+   
+}
 
 
 // Media Queries

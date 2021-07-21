@@ -3,7 +3,7 @@
   padding: $padding;
 
   &__container {
-    @include flex(column);
+    @include flex(column, flex-start, flex-start);
     padding: $padding;
     max-width: $widthContainer;
     margin: auto;

@@ -137,6 +137,8 @@ main {
 .footer__container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 16px;
   max-width: 1280px;
   margin: auto;
@@ -354,16 +356,10 @@ main {
   position: relative;
 }
 .header__arrow {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  font-size: 25px;
   position: absolute;
   left: 25px;
-  height: 32px;
-  width: 32px;
-  top: 30%;
-  font-size: 20px;
+  top: 35%;
   color: #000000;
 }
 
@@ -375,13 +371,13 @@ main {
 }
 
 .menu {
-  top: -40px;
+  padding: 0;
+  margin-bottom: -48px;
+  position: relative;
+  top: -48px;
   border-radius: 32px 32px 0 0;
   background-color: #f6f6f6;
   z-index: 1;
-  position: relative;
-  padding: 0;
-  margin-bottom: -40px;
 }
 .menu__header {
   padding: 16px;
@@ -422,9 +418,9 @@ main {
 }
 .submenu__title {
   text-transform: uppercase;
+  font-weight: bold;
   position: relative;
   padding-bottom: 8px;
-  font-weight: bold;
 }
 .submenu__title::after {
   content: "";
@@ -438,7 +434,6 @@ main {
 
 .menuItem {
   display: flex;
-  flex-direction: row;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   transition-duration: 0.5s;
   background-color: #fff;
@@ -584,7 +579,6 @@ button {
   transition-duration: 0.5s;
 }
 button:hover {
-  transition: box-shadow 400ms;
   background-color: #fff;
   transform: scale(1.04);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
