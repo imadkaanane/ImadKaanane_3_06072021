@@ -65,8 +65,6 @@
             height: 4px;
             background-color: $colorTertiary;
             @include position(absolute, 25px, 0);
-            left: 0;
-            top: 25px;
         }
     }
 }

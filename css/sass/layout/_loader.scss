@@ -16,7 +16,7 @@
 
     &Container {
       margin: $margin *2;
-      font-size: 35px;  
+      @include font-size(35px); 
       width: 400px;
       @include flex(row, space-between, center);
       @include tablet {
