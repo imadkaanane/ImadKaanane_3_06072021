@@ -113,6 +113,15 @@
   transition-duration: .75s;
 }
 
+// Background
+ @mixin background($color) {
+   background-color: $color;
+ }
+
+ @mixin bg-button {
+  background-color: $bgButton;
+  background-image: $bgLinear;
+}
 
 //
 @mixin back-gradient-clip {
@@ -127,13 +136,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
-// Background
-@mixin bg-button {
-  background-color: $bgButton;
-  background-image: $bgLinear;
-}
-
 
 // Media Queries
 

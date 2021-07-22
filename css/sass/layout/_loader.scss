@@ -1,7 +1,7 @@
 .loader {
   @include position(fixed, 0, 0);
   @include block(100%, 100%);
-  background-color: $bgLoader;
+  @include background ($bgLoader);
   animation: loader 0.3s;
   animation-delay: 2s;
   animation-fill-mode: both;

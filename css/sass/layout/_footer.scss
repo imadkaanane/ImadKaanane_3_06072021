@@ -1,5 +1,5 @@
 .footer {
-  background-color: $bgFooter;
+  @include background($bgFooter);
   padding: $padding;
 
   &__container {

@@ -22,7 +22,7 @@
     margin-bottom: -$margin * 3;
     @include position(relative, -48px, 0);
     @include border-radius-menu;
-    background-color: $bgColor;
+    @include background($bgColor);
     z-index: 1;
     
     
@@ -61,7 +61,7 @@
         &::after {
             content: "";
             @include block (48px, 4px);
-            background-color: $colorTertiary;
+            @include background($colorTertiary);
             @include position(absolute, 25px, 0);
         }
     }
@@ -70,7 +70,7 @@
 .menuItem {
     display: flex;
     @include box-shadow;
-    background-color: $white;
+    @include background($white);
     padding: $padding;
     @include border-radius-menuItem;
     margin: $margin 0;
@@ -110,7 +110,7 @@
     }
   
     &__confirmation {
-        background-color: $colorTertiary;
+        @include background($colorTertiary);
         margin: (-$margin) (-$margin * 5) (-$margin) ($margin);
         @include block(64px, auto);
         @include flex(row, center, center);
@@ -124,7 +124,7 @@
   
     &__wrapIcon {
         @include block(26px, 26px);
-        background-color: $white;
+        @include background($white);
         @include flex(row, center, center);
         @include border-radius-WrapIcon;
         transform: rotate(-180deg);

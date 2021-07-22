@@ -1,6 +1,6 @@
 .localisation {
     padding: $padding;
-    background-color: $bgLocal;
+    @include background($bgLocal);
     @include flex(row, center, center);
 
     &__icon {
@@ -14,7 +14,7 @@
 }
 
 .description { 
-    background-color: $bgColor;
+    @include background($bgColor);
     @include flex(column, center, center);
     @include desktop {
         background-color: $transp; 
@@ -47,7 +47,7 @@
         @include flex(row, flex-start, center);
         @include box-shadow; 
         @include border-radius-step;
-        background-color: $bgColor;
+        @include background($bgColor);
         padding: $padding;
 
         &:hover{
@@ -62,7 +62,7 @@
         }
         
         &--number{
-            background-color: $colorPrimary;
+            @include background($colorPrimary);
             color: $white;
             @include border-radius-number;
             padding: math.div($padding, 4) math.div($padding, 2);
@@ -82,9 +82,9 @@
 }
 
 .restaurants {
-    background-color: $bgColor; 
+    @include background($bgColor);
     @include desktop {
-        background-color: $transp; 
+        @include background($transp); 
     }
 }
 
@@ -113,7 +113,7 @@
     }
 
     &__tag {
-        background-color: $colorTertiary;
+        @include background($colorTertiary);
         color: darken($colorTertiary, 50%);
         padding: math.div($padding, 2);
         @include border-radius-tag;
