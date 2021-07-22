@@ -21,7 +21,7 @@
     padding: 0;
     margin-bottom: -$margin * 3;
     @include position(relative, -48px, 0);
-    @include border-radius-menu;
+    @include border-radius($borderMenu);
     @include background($bgColor);
     z-index: 1;
     
@@ -72,7 +72,7 @@
     @include box-shadow;
     @include background($white);
     padding: $padding;
-    @include border-radius-menuItem;
+    @include border-radius($borderMenuItem);
     margin: $margin 0;
     overflow: hidden;
     cursor: pointer;
@@ -126,7 +126,7 @@
         @include block(26px, 26px);
         @include background($white);
         @include flex(row, center, center);
-        @include border-radius-WrapIcon;
+        @include border-radius($borderWrapIcon);
         transform: rotate(-180deg);
         transition-duration: .75s;
     }

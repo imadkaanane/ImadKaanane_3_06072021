@@ -23,17 +23,17 @@ $fontTitle: "Shrikhand", "cursive";
 $fontText: 'Roboto', sans-serif;
 
 // Borders
-$radius:(
-    borderButton: 100px,
-    borderStep: 20px,
-    borderNumber: 50%,
-    borderCard: 16px,
-    borderImg: 16px 16px 0 0,
-    borderTag: 5px,
-    borderMenu: 32px 32px 0 0,
-    borderMenuItem: 12px,
-    borderWrapIcon: 100px,
-);
+
+$borderButton: 100px;
+$borderStep: 20px;
+$borderNumber: 50%;
+$borderCard: 16px;
+$borderImg: 16px 16px 0 0;
+$borderTag: 5px;
+$borderMenu: 32px 32px 0 0;
+$borderMenuItem: 12px;
+$borderWrapIcon: 100px;
+
 
 // Animations
 $num-load: 10;

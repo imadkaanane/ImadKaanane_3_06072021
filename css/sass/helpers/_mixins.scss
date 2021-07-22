@@ -43,7 +43,7 @@
   justify-content: center;
 }
 
-// Fonts
+// Fonts, decoration texte
 
 @mixin font-family($font) {
   font-family: $font ;
@@ -56,6 +56,7 @@
   font-weight: $weight;
 }
 
+
 // Largeurs,  longueurs
 
 @mixin block($width, $height) {
@@ -64,40 +65,29 @@
 }
 
 // Borders
-@mixin border-radius-button($value: map-get($radius, borderButton)) {
-  border-radius: $value;
-}
 
-@mixin border-radius-step($value: map-get($radius, borderStep)) {
-  border-radius: $value;
-}
 
-@mixin border-radius-number($value: map-get($radius, borderNumber)) {
-  border-radius: $value;
-}
 
-@mixin border-radius-card($value: map-get($radius, borderCard)) {
-  border-radius: $value;
-}
-
-@mixin border-radius-img($value: map-get($radius, borderImg)) {
-  border-radius: $value;
-}
-
-@mixin border-radius-tag($value: map-get($radius, borderTag)) {
-  border-radius: $value;
-}
-
-@mixin border-radius-menu($value: map-get($radius, borderMenu)) {
-  border-radius: $value;
-}
-
-@mixin border-radius-menuItem($value: map-get($radius, borderMenuItem)) {
-  border-radius: $value;
-}
-
-@mixin border-radius-WrapIcon($value: map-get($radius, borderWrapIcon)) {
-  border-radius: $value;
+@mixin border-radius($value) {
+  @if $value == $borderButton {
+     border-radius: $borderButton;
+  } @else if $value ==  $borderStep {
+    border-radius: $borderStep;
+  } @else if $value ==  $borderNumber {
+    border-radius: $borderNumber;
+  } @else if $value ==  $borderCard{
+    border-radius: $borderCard;
+  }@else if $value ==  $borderImg{
+    border-radius: $borderImg;
+  }@else if $value ==  $borderTag{
+    border-radius: $borderTag;
+  }@else if $value ==  $borderMenu{
+    border-radius: $borderMenu;
+  }@else if $value ==  $borderMenuItem{
+    border-radius: $borderMenuItem;
+  }@else if $value ==  $borderWrapIcon{
+    border-radius: $borderWrapIcon;
+  }
 }
 
 
@@ -160,3 +150,5 @@
       @content;
     }
   }
+
+
