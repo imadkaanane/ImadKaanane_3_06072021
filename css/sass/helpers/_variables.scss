@@ -7,6 +7,7 @@ $bgColor: #f6f6f6;
 $bgButton: rgb(104, 104, 104);
 $bgLoader: rgba(255, 255, 255, 0.90);
 $bgLocal: rgba(228, 224, 224, 0.5); 
+$bgFooter: #353535;
 $white: #fff;
 $black: #000000;
 $transp: transparent;
@@ -32,8 +33,8 @@ $radius:(
     borderMenu: 32px 32px 0 0,
     borderMenuItem: 12px,
     borderWrapIcon: 100px,
-
 );
+
 // Animations
 $num-load: 10;
 $anim-dur: 2000ms;

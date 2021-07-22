@@ -1,5 +1,5 @@
 .footer {
-  background-color: #353535;
+  background-color: $bgFooter;
   padding: $padding;
 
   &__container {
@@ -11,7 +11,7 @@
   
   &__logo {
     color: $white;
-    font-family: $fontTitle;
+    @include font-family($fontTitle);
     margin: 0;
     @include font-size(20px);
     padding-bottom: $padding;

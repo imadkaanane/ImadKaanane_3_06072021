@@ -1,12 +1,12 @@
 .header {
-  padding: $padding ;
-  @include box-shadow;
-  @include position(relative, 0, 0);
-  z-index: 1;
-  
-  &__logo {
-    font-family: $fontTitle;
-    margin: 0;
-    @include text-center;
-  }
+    padding: $padding ;
+    @include box-shadow;
+    @include position(relative, 0, 0);
+    z-index: 1;
+    
+    &__logo {
+      @include font-family($fontTitle);
+      margin: 0;
+      @include text-center;
+    }
 }

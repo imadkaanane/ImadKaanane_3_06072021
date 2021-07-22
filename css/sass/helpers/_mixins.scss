@@ -43,7 +43,11 @@
   justify-content: center;
 }
 
-// Fonts 
+// Fonts
+
+@mixin font-family($font) {
+  font-family: $font ;
+}
 @mixin font-size($size: 25px) {
   font-size: $size;
 }

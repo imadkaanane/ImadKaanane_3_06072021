@@ -11,12 +11,12 @@
   &__item {
     animation: bounce .75s;
     animation-iteration-count: 3;
-    font-family: $fontTitle;
+    @include font-family($fontTitle);
 
     &Container {
       margin: $margin *2;
       @include font-size(35px); 
-      width: 400px;
+      @include block (400px, auto);
       @include flex(row, space-between, center);
       @include tablet {
         @include font-size(50px);

@@ -1,144 +1,142 @@
 .localisation {
-  padding: $padding;
-  background-color: $bgLocal;
-  @include flex(row, center, center);
+    padding: $padding;
+    background-color: $bgLocal;
+    @include flex(row, center, center);
 
-  &__icon {
-    margin-right: $margin;
-    @include font-size;
-  }
+    &__icon {
+        margin-right: $margin;
+        @include font-size;
+    }
 
-  &__text {
-    @include font-weight(700);
-  }
+    &__text {
+        @include font-weight(700);
+    }
 }
 
 .description { 
-  background-color: $bgColor;
-  @include flex(column, center, center);
-  @include desktop {
-  background-color: $transp; 
- }
+    background-color: $bgColor;
+    @include flex(column, center, center);
+    @include desktop {
+        background-color: $transp; 
+    }
 
-  &__title {
-    padding: $padding;
-    @include text-center;
-  }
+    &__title {
+        padding: $padding;
+        @include text-center;
+    }
 
-  &__subtitle {
-    @include text-center;
-  }
+    &__subtitle {
+        @include text-center;
+    }
 
-  &__btn {
-    padding: $padding;  
-    margin: $margin;
-  }
+    &__btn {
+        padding: $padding;  
+        margin: $margin;
+    }
 }
 
 .working {
-  &__steps {
-    @include grid;
-    margin-top: $margin * 2;
-    margin-left: $margin;
-    cursor: pointer;
-  }
-
-  &__step {
-    @include flex(row, flex-start, center);
-    @include box-shadow; 
-    @include border-radius-step;
-    background-color: $bgColor;
-    padding: $padding;
-
-    &:hover{
-      @include box-shadow-hover;
-      background-color: rgba(147, 86, 220, 0.15);
+    &__steps {
+        @include grid;
+        margin-top: $margin * 2;
+        margin-left: $margin;
+        cursor: pointer;
     }
 
-    &:hover > i {
-      color: $colorPrimary;
+    &__step {
+        @include flex(row, flex-start, center);
+        @include box-shadow; 
+        @include border-radius-step;
+        background-color: $bgColor;
+        padding: $padding;
+
+        &:hover{
+            @include box-shadow-hover;
+        }
+
+        &:hover > i {
+            color: $colorPrimary;
+        }
+        &:hover > span {
+            @include font-weight;
+        }
+        
+        &--number{
+            background-color: $colorPrimary;
+            color: $white;
+            @include border-radius-number;
+            padding: math.div($padding, 4) math.div($padding, 2);
+            margin-left: -($margin * 2);
+        }    
     }
-    &:hover > span {
-      @include font-weight;
-    }
-      
-    &--number{
-      background-color: $colorPrimary;
-      color: $white;
-      @include border-radius-number;
-      padding: math.div($padding, 4) math.div($padding, 2);
-      margin-left: -($margin * 2);
+
+    &__text {
+        margin-left: $margin;
     }    
-  }
 
-  &__text {
-    margin-left: $margin;
-  }    
-
-  &__icon {
-    margin-left: $margin;
-    @include font-size(20px);
-    color: #444;
-  } 
+    &__icon {
+        margin-left: $margin;
+        @include font-size(20px);
+        color: #444;
+    } 
 }
 
 .restaurants {
-  background-color: $bgColor; 
-  @include desktop {
-     background-color: $transp; 
-  }
+    background-color: $bgColor; 
+    @include desktop {
+        background-color: $transp; 
+    }
 }
-  
+
 .cards {
-  @include grid;
-  padding-top: $padding * 2;
-  padding-bottom: $padding * 2;
+    @include grid;
+    padding-top: $padding * 2;
+    padding-bottom: $padding * 2;
 }
-  
+
 .card {
-  @include box-shadow;
-  @include border-radius-card;
-  @include position(relative, 0, 0);
-  text-decoration: none;
-  color: inherit;
-  
-  &:hover {  
-    @include box-shadow-hover;
-  }
-
-  &__img {
-    @include block(100%, 190px);
-    border: transparent solid 0px;
-    @include border-radius-img;
-    object-fit: cover;
-  }
-
-  &__tag {
-    background-color: $colorTertiary;
-    color: darken($colorTertiary, 50%);
-    padding: math.div($padding, 2);
-    @include border-radius-tag;
-    @include position-right(absolute, 16px, 12px);
-
-  }
-
-  &__footer {
-    padding: $padding;
+    @include box-shadow;
+    @include border-radius-card;
     @include position(relative, 0, 0);
-    @include flex(row, flex-start, center);
-  }
+    text-decoration: none;
+    color: inherit;
+  
+    &:hover {  
+        @include box-shadow-hover;
+    }
 
-  &__content {
-    flex: 1;
-  }
+    &__img {
+        @include block(100%, 190px);
+        border: transparent solid 0px;
+        @include border-radius-img;
+        object-fit: cover;
+    }
 
-  &__btn {
-    border: none;
-    margin-top: -(math.div($margin, 2));
-  }
+    &__tag {
+        background-color: $colorTertiary;
+        color: darken($colorTertiary, 50%);
+        padding: math.div($padding, 2);
+        @include border-radius-tag;
+        @include position-right(absolute, 16px, 12px);
+    }
 
-  &__title {
-    margin-bottom: math.div($margin, 4);
-  }
+    &__footer {
+        padding: $padding;
+        @include position(relative, 0, 0);
+        @include flex(row, flex-start, center);
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__btn {
+        border: none;
+        margin-top: -(math.div($margin, 2));
+    }
+
+    &__title {
+        margin-bottom: math.div($margin, 4);
+    }
 
 }

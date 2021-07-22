@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 @keyframes menuAppear {
   0% {
     transform: scale(0);
@@ -95,6 +96,7 @@ main {
   margin: 32px;
   font-size: 35px;
   width: 400px;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -256,7 +258,6 @@ main {
   transform: scale(1.04);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
   transition-duration: 0.75s;
-  background-color: rgba(147, 86, 220, 0.15);
 }
 .working__step:hover > i {
   color: #9356DC;

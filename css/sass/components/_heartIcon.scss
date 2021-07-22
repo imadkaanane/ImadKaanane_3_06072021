@@ -6,7 +6,7 @@
         opacity: 1;
         @include bg-button;
         @include back-gradient-clip;
-        font-weight: bold;
+        @include font-weight (bold);
         transform: scale(1.05);
     }
 }

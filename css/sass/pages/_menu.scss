@@ -31,11 +31,10 @@
         padding: $padding;
         padding-top: $padding * 2;
         @include flex(row, space-between, center);
-
     }
   
     &__title {
-      font-family: $fontTitle;
+        @include font-family($fontTitle);
     }
 
     &__btn {
