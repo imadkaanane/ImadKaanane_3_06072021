@@ -50,7 +50,8 @@
         padding: $padding;
 
         &:hover{
-            @include box-shadow-hover;
+            @include box-shadow-hover($x, $y, $blur, $color-hover);
+            background-color: rgba(147, 86, 220, 0.1);
         }
 
         &:hover > i {
@@ -63,7 +64,7 @@
         &--number{
             @include background($colorPrimary);
             color: $white;
-            @include border-radius-shadow($borderNumber, 0, 0, 0, none, 0);
+            @include border-radius-shadow($borderNumber, 0, 0, 0, 0, 0);
             padding: math.div($padding, 4) math.div($padding, 2);
             margin-left: -($margin * 2);
         }    
@@ -101,13 +102,13 @@
     color: inherit;
   
     &:hover {  
-        @include box-shadow-hover;
+        @include box-shadow-hover($x, $y, $blur, $color-hover);
     }
 
     &__img {
         @include block(100%, 190px);
         border: transparent solid 0px;
-        @include border-radius-shadow($borderImg, 0, 0, 0, none, 0);
+        @include border-radius-shadow($borderImg, 0, 0, 0, 0, 0);
         object-fit: cover;
     }
 
@@ -115,7 +116,7 @@
         @include background($colorTertiary);
         color: darken($colorTertiary, 50%);
         padding: math.div($padding, 2);
-        @include border-radius-shadow($borderTag, 0, 0, 0, none, 0);
+        @include border-radius-shadow($borderTag, 0, 0, 0, 0, 0);
         @include position-right(absolute, 16px, 12px);
     }
 

@@ -77,6 +77,13 @@
 }
 
 // Borders-radius, box-shadow, transition....
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  -moz-transform: $property;
+  transform: $property;
+}
+
 @mixin border-radius-shadow($radius, $x, $y, $blur, $color, $transition) {
   @if $radius == 0 and $x == $x and $y == $y and $blur == $blur and $color == $color and $transition == 0{
     -webkit-box-shadow: $x $y $blur $color;
@@ -98,7 +105,7 @@
       -ms-box-shadow: $x $y $blur $color;
       box-shadow: $x $y $blur $color;
       transition-duration: $transition;
-  } @else if $radius ==  $borderNumber and $x == 0 and $y == 0 and $blur == 0 and $color == none and $transition == 0 {
+  } @else if $radius ==  $borderNumber and $x == 0 and $y == 0 and $blur == 0 and $color == 0 and $transition == 0 {
       border-radius: $borderNumber;
   } @else if $radius ==  $borderCard and and $x == $x and $y == $y and $blur == $blur and $color == $color and $transition == $transition{
       border-radius: $borderCard;
@@ -107,11 +114,11 @@
       -ms-box-shadow: $x $y $blur $color;
       box-shadow: $x $y $blur $color;
       transition-duration: $transition;
-  } @else if $radius ==  $borderImg and $x == 0 and $y == 0 and $blur == 0 and $color == none and $transition == 0{
+  } @else if $radius ==  $borderImg and $x == 0 and $y == 0 and $blur == 0 and $color == 0 and $transition == 0{
       border-radius: $borderImg;
-  } @else if $radius ==  $borderTag and $x == 0 and $y == 0 and $blur == 0 and $color == none and $transition == 0{
+  } @else if $radius ==  $borderTag and $x == 0 and $y == 0 and $blur == 0 and $color == 0 and $transition == 0{
       border-radius: $borderTag;
-  } @else if $radius ==  $borderMenu  and $x == 0 and $y == 0 and $blur == 0 and $color == none and $transition == 0{
+  } @else if $radius ==  $borderMenu  and $x == 0 and $y == 0 and $blur == 0 and $color == 0 and $transition == 0{
       border-radius: $borderMenu;
   } @else if $radius ==  $borderMenuItem and $x == $x and $y == $y and $blur == $blur and $color == $color and $transition == $transition{
       border-radius: $borderMenuItem;
@@ -120,24 +127,25 @@
       -ms-box-shadow: $x $y $blur $color;
       box-shadow: $x $y $blur $color;
       transition-duration: $transition;
-  } @else if $radius ==  $borderWrapIcon  and $x == 0 and $y == 0 and $blur == 0 and $color == none and $transition == 0{
+  } @else if $radius ==  $borderWrapIcon  and $x == 0 and $y == 0 and $blur == 0 and $color == 0 and $transition == 0{
       border-radius: $borderWrapIcon;
   }
 }
 
-
-
-
-
-@mixin box-shadow-hover {
-  transform: scale(1.04);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
+@mixin box-shadow-hover($x, $y, $blur, $color-hover) {
+  -webkit-box-shadow: $x $y $blur $color-hover;
+  -moz-box-shadow: $x $y $blur $color-hover;
+  -ms-box-shadow: $x $y $blur $color-hover;
+  box-shadow: $x $y $blur $color-hover;
+  @include transform(scale(1.04));
   transition-duration: .75s;
 }
 
+
+
 // Background
- @mixin background($color) {
-   background-color: $color;
+ @mixin background($colorBg) {
+   background-color: $colorBg;
  }
 
  @mixin buttonPrimary {
@@ -158,7 +166,7 @@
   } @else if $anim == arise and $dur == .6s {
     animation: $anim $dur;
     opacity: 1;
-    transform: scale(1.2);
+    @include transform(scale(1.1));
   } @else if $anim == menuAppear and $dur == 1.75s {
     animation: $anim $dur;
     animation-timing-function: cubic-bezier(.5,1.58,.34,.82);

@@ -7,11 +7,8 @@ button {
   @include buttonPrimary;
   cursor: pointer;
   
-
   &:hover {
     background-color: $white;
-    @include box-shadow-hover;
+    @include box-shadow-hover($x, $y, $blur, $color-hover);
   }
-
-
 }

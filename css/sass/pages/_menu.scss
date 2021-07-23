@@ -21,7 +21,7 @@
     padding: 0;
     margin-bottom: -$margin * 3;
     @include position(relative, -48px, 0);
-    @include border-radius-shadow($borderMenu, 0, 0, 0, none, 0);
+    @include border-radius-shadow($borderMenu, 0, 0, 0, 0, 0);
     @include background($bgColor);
     z-index: 1;
     
@@ -80,7 +80,7 @@
     max-width: 100%;
 
     &:hover {
-        @include box-shadow-hover;
+        @include box-shadow-hover($x, $y, $blur, $color-hover);
         animation-fill-mode: none;
     }
 
@@ -124,13 +124,13 @@
         @include block(26px, 26px);
         @include background($white);
         @include flex(row, center, center);
-        @include border-radius-shadow($borderWrapIcon, 0, 0, 0, none, 0);
-        transform: rotate(-180deg);
+        @include border-radius-shadow($borderWrapIcon, 0, 0, 0, 0, 0);
+        @include transform(rotate(-180deg));
         transition-duration: .75s;
     }
   
     &:hover &__wrapIcon {
-        transform: rotate(0);
+        @include transform(rotate(0));
     }
   
     &__icon {
