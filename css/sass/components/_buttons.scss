@@ -4,12 +4,11 @@ button {
   @include font-size(18px);
   @include border($borderButton, $shadow, $transition);
   color: $white;
-  @include bg-button;
+  @include buttonPrimary;
   cursor: pointer;
   
 
   &:hover {
-    
     background-color: $white;
     @include box-shadow-hover;
   }

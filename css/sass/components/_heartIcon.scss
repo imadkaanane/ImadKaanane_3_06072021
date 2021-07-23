@@ -2,11 +2,11 @@
     @include font-size;
     cursor: pointer;
     &:hover {
-        animation: arise .6s ease-in-out;
-        opacity: 1;
-        @include bg-button;
+        @include animation(arise, .6s);
+        
+        @include buttonPrimary;
         @include back-gradient-clip;
         @include font-weight (bold);
-        transform: scale(1.05);
+        
     }
 }

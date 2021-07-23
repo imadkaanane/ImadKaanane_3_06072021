@@ -74,11 +74,9 @@
     padding: $padding;
     @include border($borderMenuItem, $shadow, $transition);
     margin: $margin 0;
-    overflow: hidden;
-    cursor: pointer;
-    animation: menuAppear 1.75s;
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-    animation-fill-mode: both;
+
+    @include animation(menuAppear, 1.75s);
+
     max-width: 100%;
 
     &:hover {

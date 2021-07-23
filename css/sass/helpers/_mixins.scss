@@ -68,32 +68,32 @@
   @if $radius == 0 and $shadow == $shadow and $transition == $transition{
     box-shadow: $shadow;
     transition-duration: $transition;
-  }@else if $radius == $borderButton and $shadow == $shadow and $transition == $transition {
-     border-radius: $borderButton;
-     box-shadow: $shadow;
-     transition-duration: $transition;
+  } @else if $radius == $borderButton and $shadow == $shadow and $transition == $transition {
+      border-radius: $borderButton;
+      box-shadow: $shadow;
+      transition-duration: $transition;
   } @else if $radius ==  $borderStep and $shadow == $shadow and $transition == $transition {
-    border-radius: $borderStep;
-    box-shadow: $shadow;
-    transition-duration: $transition;
+      border-radius: $borderStep;
+      box-shadow: $shadow;
+      transition-duration: $transition;
   } @else if $radius ==  $borderNumber and $shadow == 0 and $transition == 0 {
-    border-radius: $borderNumber;
+      border-radius: $borderNumber;
   } @else if $radius ==  $borderCard and $shadow == $shadow and $transition == $transition{
-    border-radius: $borderCard;
-    box-shadow: $shadow;
-    transition-duration: $transition;
-  }@else if $radius ==  $borderImg and $shadow == 0 and $transition == 0{
-    border-radius: $borderImg;
-  }@else if $radius ==  $borderTag and $shadow == 0 and $transition == 0{
-    border-radius: $borderTag;
-  }@else if $radius ==  $borderMenu and $shadow == 0 and $transition == 0{
-    border-radius: $borderMenu;
-  }@else if $radius ==  $borderMenuItem and $shadow == $shadow and $transition == $transition{
-    border-radius: $borderMenuItem;
-    box-shadow: $shadow;
-    transition-duration: $transition;
-  }@else if $radius ==  $borderWrapIcon and $shadow == 0 and $transition == 0{
-    border-radius: $borderWrapIcon;
+      border-radius: $borderCard;
+      box-shadow: $shadow;
+      transition-duration: $transition;
+  } @else if $radius ==  $borderImg and $shadow == 0 and $transition == 0{
+      border-radius: $borderImg;
+  } @else if $radius ==  $borderTag and $shadow == 0 and $transition == 0{
+      border-radius: $borderTag;
+  } @else if $radius ==  $borderMenu and $shadow == 0 and $transition == 0{
+      border-radius: $borderMenu;
+  } @else if $radius ==  $borderMenuItem and $shadow == $shadow and $transition == $transition{
+      border-radius: $borderMenuItem;
+      box-shadow: $shadow;
+      transition-duration: $transition;
+  } @else if $radius ==  $borderWrapIcon and $shadow == 0 and $transition == 0{
+      border-radius: $borderWrapIcon;
   }
 }
 
@@ -112,7 +112,7 @@
    background-color: $color;
  }
 
- @mixin bg-button {
+ @mixin buttonPrimary {
   background-color: $bgButton;
   background-image: $bgLinear;
 }
@@ -129,6 +129,28 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+// Animations
+@mixin animation($anim, $dur) {
+  @if $anim == loader and $dur == .3s {
+    animation: $anim $dur;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+  } @else if $anim == bounce and $dur == .75s{
+    animation: $anim $dur;
+    animation-iteration-count: 3;
+  } @else if $anim == arise and $dur == .6s {
+    animation: $anim $dur;
+    opacity: 1;
+    transform: scale(1.05);
+  } @else if $anim == menuAppear and $dur == 1.75s {
+    animation: $anim $dur;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+    overflow: hidden;
+    cursor: pointer;
+  }
 }
 
 // Media Queries

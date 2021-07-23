@@ -2,6 +2,7 @@
 $colorPrimary: #9356DC;
 $colorSecondary: #FF79DA;
 $colorTertiary: #99E2D0;
+
 $bgLinear: linear-gradient(0deg, color.scale($colorPrimary, $alpha: -10%) 0%, color.scale($colorSecondary, $alpha: -10%) 100%);
 $bgButton: rgb(104, 104, 104);
 
@@ -37,6 +38,9 @@ $borderWrapIcon: 100px;
 
 $shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 $transition: .5s;
+
+
+
 // Animations
 $num-load: 10;
 $anim-dur: 2000ms;

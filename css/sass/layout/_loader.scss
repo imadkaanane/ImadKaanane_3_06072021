@@ -2,15 +2,14 @@
   @include position(fixed, 0, 0);
   @include block(100%, 100%);
   @include background ($bgLoader);
-  animation: loader 0.3s;
-  animation-delay: 2s;
-  animation-fill-mode: both;
+  @include animation (loader, 0.3s );
+
   z-index: 2;
   @include flex(row, center, center);
   
   &__item {
-    animation: bounce .75s;
-    animation-iteration-count: 3;
+    @include animation(bounce, .75s);
+    
     @include font-family($fontTitle);
 
     &Container {
