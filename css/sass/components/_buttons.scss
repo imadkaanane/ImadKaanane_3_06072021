@@ -2,11 +2,11 @@ button {
   border: 0;
   @include font-weight(500);
   @include font-size(18px);
-  @include border-radius($borderButton);
+  @include border($borderButton, $shadow, $transition);
   color: $white;
   @include bg-button;
   cursor: pointer;
-  @include box-shadow;
+  
 
   &:hover {
     

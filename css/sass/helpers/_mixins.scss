@@ -58,44 +58,48 @@
 
 
 // Largeurs,  longueurs
-
 @mixin block($width, $height) {
   width: $width;
   height: $height;
 }
 
 // Borders
-
-
-
-@mixin border-radius($value) {
-  @if $value == $borderButton {
+@mixin border($radius, $shadow, $transition) {
+  @if $radius == 0 and $shadow == $shadow and $transition == $transition{
+    box-shadow: $shadow;
+    transition-duration: $transition;
+  }@else if $radius == $borderButton and $shadow == $shadow and $transition == $transition {
      border-radius: $borderButton;
-  } @else if $value ==  $borderStep {
+     box-shadow: $shadow;
+     transition-duration: $transition;
+  } @else if $radius ==  $borderStep and $shadow == $shadow and $transition == $transition {
     border-radius: $borderStep;
-  } @else if $value ==  $borderNumber {
+    box-shadow: $shadow;
+    transition-duration: $transition;
+  } @else if $radius ==  $borderNumber and $shadow == 0 and $transition == 0 {
     border-radius: $borderNumber;
-  } @else if $value ==  $borderCard{
+  } @else if $radius ==  $borderCard and $shadow == $shadow and $transition == $transition{
     border-radius: $borderCard;
-  }@else if $value ==  $borderImg{
+    box-shadow: $shadow;
+    transition-duration: $transition;
+  }@else if $radius ==  $borderImg and $shadow == 0 and $transition == 0{
     border-radius: $borderImg;
-  }@else if $value ==  $borderTag{
+  }@else if $radius ==  $borderTag and $shadow == 0 and $transition == 0{
     border-radius: $borderTag;
-  }@else if $value ==  $borderMenu{
+  }@else if $radius ==  $borderMenu and $shadow == 0 and $transition == 0{
     border-radius: $borderMenu;
-  }@else if $value ==  $borderMenuItem{
+  }@else if $radius ==  $borderMenuItem and $shadow == $shadow and $transition == $transition{
     border-radius: $borderMenuItem;
-  }@else if $value ==  $borderWrapIcon{
+    box-shadow: $shadow;
+    transition-duration: $transition;
+  }@else if $radius ==  $borderWrapIcon and $shadow == 0 and $transition == 0{
     border-radius: $borderWrapIcon;
   }
 }
 
 
 // Shadow
-@mixin box-shadow {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  transition-duration: .5s;
-}
+
 
 @mixin box-shadow-hover {
   transform: scale(1.04);

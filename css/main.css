@@ -248,9 +248,9 @@ main {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  border-radius: 20px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   transition-duration: 0.5s;
-  border-radius: 20px;
   background-color: #f6f6f6;
   padding: 16px;
 }
@@ -310,9 +310,9 @@ main {
 }
 
 .card {
+  border-radius: 16px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   transition-duration: 0.5s;
-  border-radius: 16px;
   position: relative;
   top: 0;
   left: 0;
@@ -449,11 +449,11 @@ main {
 
 .menuItem {
   display: flex;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  transition-duration: 0.5s;
   background-color: #fff;
   padding: 16px;
   border-radius: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  transition-duration: 0.5s;
   margin: 16px 0;
   overflow: hidden;
   cursor: pointer;
@@ -520,6 +520,8 @@ main {
   justify-content: center;
   align-items: center;
   border-radius: 100px;
+  box-shadow: 0;
+  transition-duration: 0;
   transform: rotate(-180deg);
   transition-duration: 0.75s;
 }
@@ -589,12 +591,12 @@ button {
   font-weight: 500;
   font-size: 18px;
   border-radius: 100px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  transition-duration: 0.5s;
   color: #fff;
   background-color: #686868;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
   cursor: pointer;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  transition-duration: 0.5s;
 }
 button:hover {
   background-color: #fff;

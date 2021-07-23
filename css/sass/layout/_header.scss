@@ -1,6 +1,6 @@
 .header {
     padding: $padding ;
-    @include box-shadow;
+    @include border(0, $shadow, $transition);
     @include position(relative, 0, 0);
     z-index: 1;
     
