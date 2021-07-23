@@ -1,6 +1,6 @@
 .header {
     padding: $padding ;
-    @include border(0, $shadow, $transition);
+    @include border-radius-shadow(0, $x, $y, $blur, $color, 0);
     @include position(relative, 0, 0);
     z-index: 1;
     

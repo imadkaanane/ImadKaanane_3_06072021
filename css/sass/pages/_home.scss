@@ -45,7 +45,7 @@
 
     &__step {
         @include flex(row, flex-start, center);
-        @include border($borderStep,$shadow, $transition);
+        @include border-radius-shadow($borderStep, $x, $y, $blur, $color, $transition);
         @include background($bgColor);
         padding: $padding;
 
@@ -63,7 +63,7 @@
         &--number{
             @include background($colorPrimary);
             color: $white;
-            @include border($borderNumber, 0, 0);
+            @include border-radius-shadow($borderNumber, 0, 0, 0, none, 0);
             padding: math.div($padding, 4) math.div($padding, 2);
             margin-left: -($margin * 2);
         }    
@@ -95,7 +95,7 @@
 
 .card {
    
-    @include border($borderCard, $shadow, $transition);
+    @include border-radius-shadow($borderCard, $x, $y, $blur, $color, $transition);
     @include position(relative, 0, 0);
     text-decoration: none;
     color: inherit;
@@ -107,7 +107,7 @@
     &__img {
         @include block(100%, 190px);
         border: transparent solid 0px;
-        @include border($borderImg, 0, 0);
+        @include border-radius-shadow($borderImg, 0, 0, 0, none, 0);
         object-fit: cover;
     }
 
@@ -115,7 +115,7 @@
         @include background($colorTertiary);
         color: darken($colorTertiary, 50%);
         padding: math.div($padding, 2);
-        @include border($borderTag, 0, 0);
+        @include border-radius-shadow($borderTag, 0, 0, 0, none, 0);
         @include position-right(absolute, 16px, 12px);
     }
 
