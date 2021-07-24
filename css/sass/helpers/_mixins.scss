@@ -85,7 +85,7 @@
 }
 
 @mixin border-radius-shadow($radius, $x, $y, $blur, $color, $transition) {
-  @if $radius == 0 and $x == $x and $y == $y and $blur == $blur and $color == $color and $transition == 0{
+  @if $radius == 0 and $x == $x and $y == $y and $blur == $blur and $color == $color {
     -webkit-box-shadow: $x $y $blur $color;
     -moz-box-shadow: $x $y $blur $color;
     -ms-box-shadow: $x $y $blur $color;
@@ -105,20 +105,20 @@
       -ms-box-shadow: $x $y $blur $color;
       box-shadow: $x $y $blur $color;
       transition-duration: $transition;
-  } @else if $radius ==  nth($border, 3) and $x == 0 and $y == 0 and $blur == 0 and $color == 0 and $transition == 0 {
+  } @else if $radius ==  nth($border, 3)  {
       border-radius: nth($border, 3);
-  } @else if $radius ==  nth($border, 4) and and $x == $x and $y == $y and $blur == $blur and $color == $color and $transition == $transition{
+  } @else if $radius ==  nth($border, 4) and $x == $x and $y == $y and $blur == $blur and $color == $color and $transition == $transition{
       border-radius: nth($border, 4);
       -webkit-box-shadow: $x $y $blur $color;
       -moz-box-shadow: $x $y $blur $color;
       -ms-box-shadow: $x $y $blur $color;
       box-shadow: $x $y $blur $color;
       transition-duration: $transition;
-  } @else if $radius ==  nth($border, 5) and $x == 0 and $y == 0 and $blur == 0 and $color == 0 and $transition == 0{
+  } @else if $radius ==  nth($border, 5) {
       border-radius: nth($border, 5);
-  } @else if $radius ==  nth($border, 6) and $x == 0 and $y == 0 and $blur == 0 and $color == 0 and $transition == 0{
+  } @else if $radius == nth($border, 6){
       border-radius: nth($border, 6);
-  } @else if $radius ==  nth($border, 7)  and $x == 0 and $y == 0 and $blur == 0 and $color == 0 and $transition == 0{
+  } @else if $radius ==  nth($border, 7) {
       border-radius: nth($border, 7);
   } @else if $radius ==  nth($border, 8) and $x == $x and $y == $y and $blur == $blur and $color == $color and $transition == $transition{
       border-radius: nth($border, 8);
@@ -127,8 +127,8 @@
       -ms-box-shadow: $x $y $blur $color;
       box-shadow: $x $y $blur $color;
       transition-duration: $transition;
-  } @else if $radius ==  nth($border, 1)  and $x == 0 and $y == 0 and $blur == 0 and $color == 0 and $transition == 0{
-      border-radius: nth($border, 1);
+  } @else if $radius ==  nth($border, 1)  {
+      border-radius: $borderWrapIcon;
   }
 }
 
