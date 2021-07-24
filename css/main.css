@@ -157,58 +157,6 @@ main {
   justify-content: center;
 }
 
-.footer {
-  background-color: #353535;
-  margin: auto auto auto auto;
-  padding: 16px 16px 16px 16px;
-}
-.footer__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: auto auto auto auto;
-  padding: 16px 16px 16px 16px;
-  max-width: 1280px;
-}
-.footer__logo {
-  color: #fff;
-  font-family: "Shrikhand", "cursive";
-  font-size: 20px;
-  margin: 0 0 16px 0;
-  padding: auto auto auto auto;
-}
-.footer__list {
-  list-style: none;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-}
-.footer__listElement {
-  margin: 8px 0 8px 0;
-  padding: auto auto auto auto;
-}
-.footer__listElement:first-child {
-  margin: 0 auto auto auto;
-  padding: auto auto auto auto;
-}
-.footer__listElement:last-child {
-  margin: auto auto 0 auto;
-  padding: auto auto auto auto;
-}
-.footer__link {
-  color: #fff;
-  text-decoration: none;
-}
-.footer__link:hover {
-  text-decoration: underline;
-}
-.footer__icon {
-  width: 18px;
-  height: auto;
-  margin: auto auto auto 8px;
-  padding: auto auto auto auto;
-}
-
 button {
   border: none;
   font-weight: 500;
@@ -306,8 +254,8 @@ button:hover {
   grid-template-columns: repeat(1, 1fr);
   column-gap: 2rem;
   row-gap: 2rem;
-  margin: 32px 32px auto auto;
-  padding: auto auto auto auto;
+  margin: 32px 0 32px 0;
+  padding: 0 0 0 16px;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
@@ -385,8 +333,8 @@ button:hover {
   grid-template-columns: repeat(1, 1fr);
   column-gap: 2rem;
   row-gap: 2rem;
-  margin: auto auto auto auto;
-  padding: 32px auto 32px auto;
+  margin: 0 0 0 0;
+  padding: 16px 0 16px 0;
 }
 @media screen and (min-width: 768px) {
   .cards {
@@ -487,8 +435,8 @@ button:hover {
 }
 
 .menu {
-  padding: 0;
-  margin-bottom: -48px;
+  margin: auto auto -48px auto;
+  padding: 0 0 0 0;
   position: relative;
   top: -48px;
   left: 0;
@@ -497,8 +445,8 @@ button:hover {
   z-index: 1;
 }
 .menu__header {
-  padding: 16px;
-  padding-top: 32px;
+  margin: 0 0 0 0;
+  padding: 32px 16px 16px 16px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -508,7 +456,8 @@ button:hover {
   font-family: "Shrikhand", "cursive";
 }
 .menu__btn {
-  margin-right: 16px;
+  margin: 0 0 0 16px;
+  padding: 0 0 0 0;
 }
 
 .submenus {
@@ -529,7 +478,8 @@ button:hover {
 }
 
 .submenu {
-  padding: 16px;
+  margin: 0 0 0 0;
+  padding: 16px 16px 16px 16px;
   max-width: 100%;
   overflow: hidden;
 }
@@ -539,7 +489,8 @@ button:hover {
   position: relative;
   top: 0;
   left: 0;
-  padding-bottom: 8px;
+  margin: 0 0 0 0;
+  padding: 0 0 8px 0;
 }
 .submenu__title::after {
   content: "";
@@ -554,14 +505,14 @@ button:hover {
 .menuItem {
   display: flex;
   background-color: #fff;
-  padding: 16px;
   border-radius: 12px;
   -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   -ms-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   transition-duration: 0.5s;
-  margin: 16px 0;
+  margin: 16px 0 16px 0;
+  padding: 16px 16px 16px 16px;
   animation: menuAppear 1.75s;
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   animation-fill-mode: both;
@@ -591,15 +542,15 @@ button:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 0;
-  padding-bottom: 4px;
+  margin: 0 0 0 0;
+  padding: 0 0 4px 0;
 }
 .menuItem__description {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 0;
-  padding-top: 4px;
+  margin: 0 0 0 0;
+  padding: 4px 0 0 0;
 }
 .menuItem__price {
   font-weight: bold;
@@ -607,11 +558,13 @@ button:hover {
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-left: 8px;
+  margin: 0 0 0 0;
+  padding: 0 8px 0 0;
 }
 .menuItem__confirmation {
   background-color: #99E2D0;
   margin: -16px -80px -16px 16px;
+  padding: 0 0 0 0;
   width: 64px;
   height: auto;
   display: flex;
@@ -699,13 +652,67 @@ button:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 48px;
-  padding-bottom: 64px;
+  margin: 0 0 0 0;
+  padding: 48px 48px 64px 48px;
 }
 
 .commandBtn {
   padding: 16px 80px;
+  margin: 0 0 0 0;
+  padding: 16px 80px 16px 80px;
   cursor: pointer;
+}
+
+.footer {
+  background-color: #353535;
+  margin: auto auto auto auto;
+  padding: 16px 16px 16px 16px;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: auto auto auto auto;
+  padding: 16px 16px 16px 16px;
+  max-width: 1280px;
+}
+.footer__logo {
+  color: #fff;
+  font-family: "Shrikhand", "cursive";
+  font-size: 20px;
+  margin: 0 0 16px 0;
+  padding: auto auto auto auto;
+}
+.footer__list {
+  list-style: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.footer__listElement {
+  margin: 8px 0 8px 0;
+  padding: auto auto auto auto;
+}
+.footer__listElement:first-child {
+  margin: 0 auto auto auto;
+  padding: auto auto auto auto;
+}
+.footer__listElement:last-child {
+  margin: auto auto 0 auto;
+  padding: auto auto auto auto;
+}
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__icon {
+  width: 18px;
+  height: auto;
+  margin: auto auto auto 8px;
+  padding: auto auto auto auto;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -37,7 +37,7 @@
 .working {
     &__steps {
         @include grid;
-        @include margin-padding($margin * 2, $margin * 2,auto, auto, auto, auto, auto, auto);
+        @include margin-padding(($margin * 2), 0, ($margin * 2), 0, 0, 0, 0, $padding);
         cursor: pointer;
     }
 
@@ -87,7 +87,7 @@
 
 .cards {
     @include grid;
-    @include margin-padding(auto, auto, auto, auto, $padding * 2, auto, $padding * 2, auto);
+    @include margin-padding(0, 0, 0, 0, $padding, 0, $padding, 0);
 }
 
 .card {

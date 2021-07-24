@@ -18,9 +18,7 @@
 }
   
 .menu {
-    padding: 0;
-    margin-bottom: -$margin * 3;
-    
+    @include margin-padding(auto, auto, -$margin * 3, auto, 0, 0, 0, 0);
     @include position(relative, -48px, 0);
     @include border-radius-shadow(nth($border, 7), 0, 0, 0, 0, 0);
     @include background($bgColor);
@@ -29,8 +27,7 @@
     
   
     &__header {
-        padding: $padding;
-        padding-top: $padding * 2;
+        @include margin-padding(0, 0, 0, 0, $padding * 2, $padding, $padding, $padding);
         @include flex(row, space-between, center);
     }
   
@@ -39,7 +36,8 @@
     }
 
     &__btn {
-        margin-right: $margin;
+        
+        @include margin-padding(0, 0, 0, $margin, 0, 0, 0, 0);
     }
 }
   
@@ -48,7 +46,7 @@
 }
   
 .submenu {
-    padding: $padding;
+    @include margin-padding(0, 0, 0, 0, $padding, $padding, $padding, $padding);
     max-width: 100%;
     overflow: hidden;
  
@@ -57,7 +55,7 @@
       text-transform: uppercase;
       @include font-weight;
       @include position(relative, 0, 0);
-      padding-bottom: (math.div($padding, 2));
+      @include margin-padding(0, 0, 0, 0, 0, 0, math.div($padding, 2), 0);
   
         &::after {
             content: "";
@@ -70,14 +68,10 @@
   
 .menuItem {
     display: flex;
-    
     @include background($white);
-    padding: $padding;
     @include border-radius-shadow(nth($border, 8), $x, $y, $blur, $color, $transition);
-    margin: $margin 0;
-
+    @include margin-padding($margin, 0, $margin, 0, $padding, $padding, $padding, $padding);
     @include animation(menuAppear, 1.75s);
-
     max-width: 100%;
 
     &:hover {
@@ -92,25 +86,23 @@
   
     &__title {
         @include ellipsis;
-        margin: 0;
-        padding-bottom: math.div($padding, 4);
+        @include margin-padding(0, 0, 0, 0, 0, 0, math.div($padding, 4), 0);
     }
   
     &__description {
         @include ellipsis;
-        margin: 0;
-        padding-top: math.div($padding, 4);
+        @include margin-padding(0, 0, 0, 0, math.div($padding, 4), 0, 0, 0);
     }
   
     &__price {
         @include font-weight;
         @include flex(row, flex-end, flex-end);
-        padding-left: math.div($padding, 2);
+        @include margin-padding(0, 0, 0, 0, 0, math.div($padding, 2), 0, 0);
     }
   
     &__confirmation {
         @include background($colorTertiary);
-        margin: (-$margin) (-$margin * 5) (-$margin) ($margin);
+        @include margin-padding(-$margin, -$margin * 5, -$margin, $margin, 0, 0, 0, 0);
         @include block(64px, auto);
         @include flex(row, center, center);
         transition-duration: .5s;
@@ -147,11 +139,11 @@
 
 .wrapBtn {
     @include flex(row, center, center);
-    padding: $padding * 3;
-    padding-bottom: ($padding * 4);
+    @include margin-padding(0, 0, 0, 0, $padding * 3, $padding * 3, $padding * 4, $padding * 3);
 }
   
 .commandBtn {
     padding: $padding $padding * 5;
+    @include margin-padding(0, 0, 0, 0, $padding, $padding * 5, $padding, $padding * 5);
     cursor: pointer;
 }
