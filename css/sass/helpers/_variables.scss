@@ -25,17 +25,7 @@ $fontTitle: "Shrikhand", "cursive";
 $fontText: 'Roboto', sans-serif;
 
 // Borders
-
-$borderButton: 100px;
-$borderStep: 20px;
-$borderNumber: 50%;
-$borderCard: 16px;
-$borderImg: 16px 16px 0 0;
-$borderTag: 5px;
-$borderMenu: 32px 32px 0 0;
-$borderMenuItem: 12px;
-$borderWrapIcon: 100px;
-
+$border: 100px, 20px, 50%, 16px , 16px 16px 0 0, 5px, 32px 32px 0 0, 12px;
 
 $x: 4px;
 $y: 4px;
@@ -43,8 +33,6 @@ $blur: 10px;
 $color: rgba(0, 0, 0, 0.25);
 $color-hover: rgba(0, 0, 0, 0.75);
 $transition: .5s;
-
-
 
 // Animations
 $num-load: 10;

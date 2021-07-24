@@ -2,7 +2,7 @@ button {
   border: 0;
   @include font-weight(500);
   @include font-size(18px);
-  @include border-radius-shadow($borderButton, $x, $y, $blur, $color, $transition);
+  @include border-radius-shadow(nth($border, 1), $x, $y, $blur, $color, $transition);
   color: $white;
   @include buttonPrimary;
   cursor: pointer;
