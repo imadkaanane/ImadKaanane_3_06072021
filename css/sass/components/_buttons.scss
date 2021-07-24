@@ -9,6 +9,6 @@ button {
   
   &:hover {
     background-color: $white;
-    @include box-shadow-hover($x, $y, $blur, $color-hover);
+    @include box-shadow-hover($x, $y, $blur, $color-hover, $transition-hover);
   }
 }

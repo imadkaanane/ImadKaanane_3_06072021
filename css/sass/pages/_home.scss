@@ -50,8 +50,8 @@
         padding: $padding;
 
         &:hover{
-            @include box-shadow-hover($x, $y, $blur, $color-hover);
-            background-color: rgba(147, 86, 220, 0.1);
+            @include box-shadow-hover($x, $y, $blur, $color-hover, $transition-hover);
+            background-color: rgba(147, 86, 220, 0.2);
         }
 
         &:hover > i {
@@ -102,7 +102,7 @@
     color: inherit;
   
     &:hover {  
-        @include box-shadow-hover($x, $y, $blur, $color-hover);
+        @include box-shadow-hover($x, $y, $blur, $color-hover, $transition-hover);
     }
 
     &__img {

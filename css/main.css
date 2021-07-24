@@ -317,7 +317,7 @@ button:hover {
   -moz-transform: scale(1.04);
   transform: scale(1.04);
   transition-duration: 0.75s;
-  background-color: rgba(147, 86, 220, 0.1);
+  background-color: rgba(147, 86, 220, 0.2);
 }
 .working__step:hover > i {
   color: #9356DC;

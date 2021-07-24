@@ -80,7 +80,7 @@
     max-width: 100%;
 
     &:hover {
-        @include box-shadow-hover($x, $y, $blur, $color-hover);
+        @include box-shadow-hover($x, $y, $blur, $color-hover, $transition-hover);
         animation-fill-mode: none;
     }
 
