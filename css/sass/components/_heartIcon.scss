@@ -3,7 +3,6 @@
     cursor: pointer;
     &:hover {
         @include animation(arise, .6s);
-        
         @include buttonPrimary;
         @include back-gradient-clip;
         @include font-weight (bold);

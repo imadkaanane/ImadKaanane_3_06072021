@@ -1,12 +1,12 @@
 .header {
-    padding: $padding ;
+    @include margin-padding(auto, auto, auto, auto, $padding, $padding, $padding, $padding);
     @include border-radius-shadow(0, $x, $y, $blur, $color, 0);
     @include position(relative, 0, 0);
     z-index: 1;
     
     &__logo {
       @include font-family($fontTitle);
-      margin: 0;
+      @include margin-padding(0, 0, 0, 0, auto, auto, auto, auto);
       @include text-center;
     }
 }

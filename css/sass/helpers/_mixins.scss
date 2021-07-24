@@ -70,10 +70,15 @@
 }
 
 
-// Largeurs,  longueurs
+// Largeurs,  longueurs, marges....
 @mixin block($width, $height) {
   width: $width;
   height: $height;
+}
+
+@mixin margin-padding ($mt, $ml, $mb, $mr, $pt, $pl, $pb, $pr) {
+  margin: $mt $ml $mb $mr;
+  padding: $pt $pl $pb $pr;
 }
 
 // Borders-radius, box-shadow, transition....

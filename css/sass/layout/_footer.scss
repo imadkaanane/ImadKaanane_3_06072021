@@ -1,38 +1,35 @@
 .footer {
   @include background($bgFooter);
-  padding: $padding;
+  @include margin-padding(auto, auto, auto, auto, $padding, $padding, $padding, $padding);
 
   &__container {
     @include flex(column, flex-start, flex-start);
-    padding: $padding;
+    @include margin-padding(auto, auto, auto, auto, $padding, $padding, $padding, $padding);
     max-width: $widthContainer;
-    margin: auto;
   }
   
   &__logo {
     color: $white;
     @include font-family($fontTitle);
-    margin: 0;
     @include font-size(20px);
-    padding-bottom: $padding;
-    
+    @include margin-padding(0, 0, $margin, 0, auto, auto, auto, auto);
   }
 
   &__list {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    @include margin-padding(0, 0, 0, 0, 0, 0, 0, 0);
   }
 
   &__listElement {
-    margin: (math.div($margin, 2)) 0;
-
+    
+    @include margin-padding((math.div($margin, 2)), 0, (math.div($margin, 2)), 0, auto, auto, auto, auto);
     &:first-child {
-      margin-top: 0;
+      @include margin-padding(0, auto, auto, auto, auto, auto, auto, auto);
     }
 
     &:last-child {
-      margin-bottom: 0;
+      
+      @include margin-padding(auto, auto, 0, auto, auto, auto, auto, auto);
     }
   }
 
@@ -47,6 +44,6 @@
 
   &__icon {
     @include block(18px, auto);
-    margin-right: math.div($margin, 2);
+    @include margin-padding(auto, auto, auto, math.div($margin, 2), auto, auto, auto, auto);
   }
 }

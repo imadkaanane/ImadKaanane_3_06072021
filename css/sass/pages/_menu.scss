@@ -20,6 +20,7 @@
 .menu {
     padding: 0;
     margin-bottom: -$margin * 3;
+    
     @include position(relative, -48px, 0);
     @include border-radius-shadow(nth($border, 7), 0, 0, 0, 0, 0);
     @include background($bgColor);

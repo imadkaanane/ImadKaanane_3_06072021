@@ -1,48 +1,54 @@
-@keyframes menuAppear {
-    0% {
-      transform: scale(0)
-    }
-    100% {
-      transform: scale(1);
-    }
-}
-@keyframes arise {
-    0% {
-      opacity: 0;
-    }
-    25% {
-        opacity: 0.25s;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    75% {
-        opacity: 0.75s;
-    }
-    100% {
-      opacity: 1;
-    }
-}
-
 @keyframes loader {
-    100% {
-    opacity: 0;
-    z-index: -10;
+  100% {
+  opacity: 0;
+  z-index: -10;
   }
 } 
 
-@keyframes bounce {
+@keyframes arise {
   0% {
-    transform: translateY(0);
+    opacity: 0;
   }
   25% {
-    transform: translateY(24px);
+      opacity: 0.25s;
+  }
+  50% {
+    opacity: 0.5;
   }
   75% {
-    transform: translateY(-24px);
+      opacity: 0.75s;
   }
   100% {
-    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    @include transform (translateY(0));
+  }
+  25% {
+    @include transform (translateY(24px));
+  }
+  75% {
+    @include transform (translateY(-24px));
+  }
+  100% {
+    @include transform (translateY(0));
   }
 
 }
+
+@keyframes menuAppear {
+    0% {
+      @include transform (scale(0));
+    }
+    100% {
+      @include transform (scale(1));
+    }
+}
+
+
+
+
+

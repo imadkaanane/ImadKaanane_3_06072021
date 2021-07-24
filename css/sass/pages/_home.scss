@@ -1,5 +1,5 @@
 .localisation {
-    padding: $padding;
+    @include margin-padding(auto, auto, auto, auto, $padding, $padding, $padding, $padding);
     @include background($bgLocal);
     @include flex(row, center, center);
 
@@ -17,11 +17,11 @@
     @include background($bgColor);
     @include flex(column, center, center);
     @include desktop {
-        background-color: $transp; 
+        @include background($transp);
     }
 
     &__title {
-        padding: $padding;
+        @include margin-padding(auto, auto, auto, auto, $padding, $padding, $padding, $padding);
         @include text-center;
     }
 
@@ -30,16 +30,14 @@
     }
 
     &__btn {
-        padding: $padding;  
-        margin: $margin;
+        @include margin-padding($margin, $margin, $margin, $margin, $padding, $padding, $padding, $padding);
     }
 }
 
 .working {
     &__steps {
         @include grid;
-        margin-top: $margin * 2;
-        margin-left: $margin;
+        @include margin-padding($margin * 2, $margin * 2,auto, auto, auto, auto, auto, auto);
         cursor: pointer;
     }
 
@@ -47,11 +45,11 @@
         @include flex(row, flex-start, center);
         @include border-radius-shadow(nth($border, 2), $x, $y, $blur, $color, $transition);
         @include background($bgColor);
-        padding: $padding;
+        @include margin-padding(0, 0, 0, 0, $padding, $padding, $padding, $padding);
 
         &:hover{
             @include box-shadow-hover($x, $y, $blur, $color-hover, $transition-hover);
-            background-color: rgba(147, 86, 220, 0.2);
+            @include background( rgba(147, 86, 220, 0.2));
         }
 
         &:hover > i {
@@ -65,17 +63,16 @@
             @include background($colorPrimary);
             color: $white;
             @include border-radius-shadow(nth($border, 3), 0, 0, 0, 0, 0);
-            padding: math.div($padding, 4) math.div($padding, 2);
-            margin-left: -($margin * 2);
+            @include margin-padding(0, 0, 0, -($margin * 2), math.div($padding, 4), math.div($padding, 2), math.div($padding, 4), math.div($padding, 2));
         }    
     }
 
     &__text {
-        margin-left: $margin;
+        @include margin-padding(0, 0, 0,  $margin, 0, 0, 0, 0);
     }    
 
     &__icon {
-        margin-left: $margin;
+        @include margin-padding(0, 0, 0, $margin, 0, 0, 0, 0);
         @include font-size(20px);
         color: #444;
     } 
@@ -90,8 +87,7 @@
 
 .cards {
     @include grid;
-    padding-top: $padding * 2;
-    padding-bottom: $padding * 2;
+    @include margin-padding(auto, auto, auto, auto, $padding * 2, auto, $padding * 2, auto);
 }
 
 .card {
@@ -115,13 +111,13 @@
     &__tag {
         @include background($colorTertiary);
         color: darken($colorTertiary, 50%);
-        padding: math.div($padding, 2);
+        @include margin-padding(auto, auto, auto, auto, math.div($padding, 2), math.div($padding, 2), math.div($padding, 2), math.div($padding, 2));
         @include border-radius-shadow(nth($border, 6), 0, 0, 0, 0, 0);
         @include position-right(absolute, 16px, 12px);
     }
 
     &__footer {
-        padding: $padding;
+        @include margin-padding(auto, auto, auto, auto, $padding, $padding, $padding, $padding);
         @include position(relative, 0, 0);
         @include flex(row, flex-start, center);
     }
@@ -132,11 +128,12 @@
 
     &__btn {
         border: none;
-        margin-top: -(math.div($margin, 2));
+        @include margin-padding((math.div($margin, 2)), auto, auto, auto, auto, auto, auto, auto);
     }
 
     &__title {
         margin-bottom: math.div($margin, 4);
+        @include margin-padding(auto, auto, math.div($margin, 4), auto, auto, auto, auto, auto);
     }
 
 }

@@ -1,5 +1,5 @@
 button {
-  border: 0;
+  border: none;
   @include font-weight(500);
   @include font-size(18px);
   @include border-radius-shadow(nth($border, 1), $x, $y, $blur, $color, $transition);
@@ -8,7 +8,7 @@ button {
   cursor: pointer;
   
   &:hover {
-    background-color: $white;
+    @include background($white);
     @include box-shadow-hover($x, $y, $blur, $color-hover, $transition-hover);
   }
 }

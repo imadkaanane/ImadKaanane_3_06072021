@@ -1,8 +1,5 @@
 * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    @include margin-padding(0, 0, 0, 0, 0, 0, 0, 0);
     box-sizing: border-box;
 }
   
@@ -21,5 +18,5 @@ main {
 }
 
 .paddingSection {
-    padding: ($padding * 3) $padding;
+    @include margin-padding(auto, auto, auto, auto, ($padding * 3), $padding, ($padding * 3), $padding);
 }

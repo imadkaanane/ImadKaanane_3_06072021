@@ -13,7 +13,7 @@
     @include font-family($fontTitle);
 
     &Container {
-      margin: $margin *2;
+      @include margin-padding($margin *2, $margin *2, $margin *2, $margin *2, auto, auto, auto, auto);
       @include font-size(35px); 
       @include block (400px, auto);
       @include flex(row, space-between, center);
