@@ -88,6 +88,54 @@ main {
   padding: 48px 16px 48px 16px;
 }
 
+button {
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 100px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  transition-duration: 0.5s;
+  color: #fff;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  cursor: pointer;
+}
+button:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
+  -ms-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
+  -webkit-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  transform: scale(1.04);
+  transition-duration: 0.75s;
+}
+
+.heartIcon {
+  font-size: 25px;
+  cursor: pointer;
+}
+.heartIcon:hover {
+  animation: arise 0.6s;
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  -webkit-background-clip: text;
+  -ms-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
 .loader {
   position: fixed;
   top: 0;
@@ -151,58 +199,8 @@ main {
 }
 .header__logo {
   font-family: "Shrikhand", "cursive";
-  margin: 0 0 0 0;
-  padding: auto auto auto auto;
   text-align: center;
   justify-content: center;
-}
-
-button {
-  border: none;
-  font-weight: 500;
-  font-size: 18px;
-  border-radius: 100px;
-  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  -ms-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  transition-duration: 0.5s;
-  color: #fff;
-  background-color: #686868;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
-  cursor: pointer;
-}
-button:hover {
-  background-color: #fff;
-  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
-  -ms-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
-  -webkit-transform: scale(1.04);
-  -ms-transform: scale(1.04);
-  -moz-transform: scale(1.04);
-  transform: scale(1.04);
-  transition-duration: 0.75s;
-}
-
-.heartIcon {
-  font-size: 25px;
-  cursor: pointer;
-}
-.heartIcon:hover {
-  animation: arise 0.6s;
-  opacity: 1;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  transform: scale(1.1);
-  background-color: #686868;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
-  -webkit-background-clip: text;
-  -ms-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-weight: bold;
 }
 
 .localisation {
@@ -334,7 +332,7 @@ button:hover {
   column-gap: 2rem;
   row-gap: 2rem;
   margin: 0 0 0 0;
-  padding: 16px 0 16px 0;
+  padding: 32px 0 32px 0;
 }
 @media screen and (min-width: 768px) {
   .cards {
@@ -408,7 +406,6 @@ button:hover {
   padding: auto auto auto auto;
 }
 .card__title {
-  margin-bottom: 4px;
   margin: auto auto 4px auto;
   padding: auto auto auto auto;
 }
@@ -437,11 +434,11 @@ button:hover {
 .menu {
   margin: auto auto -48px auto;
   padding: 0 0 0 0;
+  border-radius: 32px 32px 0 0;
+  background-color: #f6f6f6;
   position: relative;
   top: -48px;
   left: 0;
-  border-radius: 32px 32px 0 0;
-  background-color: #f6f6f6;
   z-index: 1;
 }
 .menu__header {
@@ -456,7 +453,7 @@ button:hover {
   font-family: "Shrikhand", "cursive";
 }
 .menu__btn {
-  margin: 0 0 0 16px;
+  margin: 0 16px 0 0;
   padding: 0 0 0 0;
 }
 
@@ -504,6 +501,9 @@ button:hover {
 
 .menuItem {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: unset;
   background-color: #fff;
   border-radius: 12px;
   -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
@@ -657,7 +657,6 @@ button:hover {
 }
 
 .commandBtn {
-  padding: 16px 80px;
   margin: 0 0 0 0;
   padding: 16px 80px 16px 80px;
   cursor: pointer;

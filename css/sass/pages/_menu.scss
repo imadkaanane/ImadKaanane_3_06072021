@@ -19,9 +19,9 @@
   
 .menu {
     @include margin-padding(auto, auto, -$margin * 3, auto, 0, 0, 0, 0);
-    @include position(relative, -48px, 0);
     @include border-radius-shadow(nth($border, 7), 0, 0, 0, 0, 0);
     @include background($bgColor);
+    @include position(relative, -48px, 0);
     z-index: 1;
     
     
@@ -35,9 +35,8 @@
         @include font-family($fontTitle);
     }
 
-    &__btn {
-        
-        @include margin-padding(0, 0, 0, $margin, 0, 0, 0, 0);
+    &__btn {  
+        @include margin-padding(0, $margin, 0, 0, 0, 0, 0, 0);
     }
 }
   
@@ -67,7 +66,7 @@
 }
   
 .menuItem {
-    display: flex;
+    @include flex(row, space-between, unset);
     @include background($white);
     @include border-radius-shadow(nth($border, 8), $x, $y, $blur, $color, $transition);
     @include margin-padding($margin, 0, $margin, 0, $padding, $padding, $padding, $padding);
@@ -143,7 +142,6 @@
 }
   
 .commandBtn {
-    padding: $padding $padding * 5;
     @include margin-padding(0, 0, 0, 0, $padding, $padding * 5, $padding, $padding * 5);
     cursor: pointer;
 }

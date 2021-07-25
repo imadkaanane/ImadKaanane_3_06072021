@@ -87,7 +87,7 @@
 
 .cards {
     @include grid;
-    @include margin-padding(0, 0, 0, 0, $padding, 0, $padding, 0);
+    @include margin-padding(0, 0, 0, 0, $padding * 2, 0, $padding * 2, 0);
 }
 
 .card {
@@ -132,7 +132,7 @@
     }
 
     &__title {
-        margin-bottom: math.div($margin, 4);
+        
         @include margin-padding(auto, auto, math.div($margin, 4), auto, auto, auto, auto, auto);
     }
 

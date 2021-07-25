@@ -1,7 +1,7 @@
 .footer {
   @include background($bgFooter);
   @include margin-padding(auto, auto, auto, auto, $padding, $padding, $padding, $padding);
-
+  
   &__container {
     @include flex(column, flex-start, flex-start);
     @include margin-padding(auto, auto, auto, auto, $padding, $padding, $padding, $padding);

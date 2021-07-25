@@ -6,7 +6,6 @@
     
     &__logo {
       @include font-family($fontTitle);
-      @include margin-padding(0, 0, 0, 0, auto, auto, auto, auto);
       @include text-center;
     }
 }
