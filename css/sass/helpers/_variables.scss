@@ -3,7 +3,7 @@ $colorPrimary: #9356DC;
 $colorSecondary: #FF79DA;
 $colorTertiary: #99E2D0;
 
-$bgLinear: linear-gradient(0deg, color.scale($colorPrimary, $alpha: -10%) 0%, color.scale($colorSecondary, $alpha: -10%) 100%);
+$bgLinear: linear-gradient(15deg, color.scale($colorPrimary, $alpha: -10%) 0%, color.scale($colorSecondary, $alpha: -10%) 100%);
 $bgButton: rgb(104, 104, 104);
 
 $bgColor: #f6f6f6;
@@ -36,7 +36,7 @@ $transition: .5s;
 $transition-hover: .75s;
 
 // Animations
-$num-load: 10;
-$anim-dur: 2000ms;
-$anim-delay: math.div($anim-dur, $num-load);
+$numLoad: 10;
+$animDur: 2000ms;
+$animDelay: math.div($animDur, $numLoad);
 

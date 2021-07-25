@@ -11,9 +11,7 @@
 }
   
 .bgImg {
-    max-width: 100%;
-    max-height: 550px;
-    @include block(100%, auto);
+    @include block(100%, 550px);
     object-fit: cover;
 }
   
@@ -46,7 +44,7 @@
   
 .submenu {
     @include margin-padding(0, 0, 0, 0, $padding, $padding, $padding, $padding);
-    max-width: 100%;
+    @include block (100%, auto);
     overflow: hidden;
  
   
@@ -130,9 +128,9 @@
     }
 }
 
-@for $i from 1 through $num-load {
+@for $i from 1 through $numLoad {
     .delay-#{$i} {
-        animation-delay: $anim-delay * $i;
+        animation-delay: $animDelay * $i;
     }
 }
 

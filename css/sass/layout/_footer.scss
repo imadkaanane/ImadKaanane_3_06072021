@@ -1,11 +1,11 @@
 .footer {
   @include background($bgFooter);
-  @include margin-padding(auto, auto, auto, auto, $padding, $padding, $padding, $padding);
+  @include margin-padding(auto, auto, auto, auto, $padding, 0, $padding, 0);
   
   &__container {
     @include flex(column, flex-start, flex-start);
     @include margin-padding(auto, auto, auto, auto, $padding, $padding, $padding, $padding);
-    max-width: $widthContainer;
+    @include block($widthContainer, auto);
   }
   
   &__logo {
@@ -28,7 +28,6 @@
     }
 
     &:last-child {
-      
       @include margin-padding(auto, auto, 0, auto, auto, auto, auto, auto);
     }
   }
