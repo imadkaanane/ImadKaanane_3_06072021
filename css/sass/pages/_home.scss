@@ -4,7 +4,7 @@
     @include flex(row, center, center);
 
     &__icon {
-        margin-right: $margin;
+        @include margin-padding(0, $margin, 0, 0, 0, 0, 0 ,0);
         @include font-size;
     }
 
@@ -36,8 +36,8 @@
 
 .working {
     &__steps {
-        @include grid;
-        @include margin-padding(($margin * 2), 0, ($margin * 2), 0, 0, 0, 0, $padding);
+        @include grid(1, 2rem, 2rem, 2, 3);
+        @include margin-padding(($margin * 2), 0, ($margin * 2), 0, 0, $padding, 0, $padding);
         cursor: pointer;
     }
 
@@ -68,7 +68,7 @@
     }
 
     &__text {
-        @include margin-padding(0, 0, 0,  $margin, 0, 0, 0, 0);
+        @include margin-padding(0, 0, 0, $margin, 0, 0, 0, 0);
     }    
 
     &__icon {
@@ -86,7 +86,7 @@
 }
 
 .cards {
-    @include grid;
+    @include grid(1, 2rem, 2rem, 2, 3);
     @include margin-padding(0, 0, 0, 0, $padding * 2, 0, $padding * 2, 0);
 }
 
@@ -103,7 +103,7 @@
 
     &__img {
         @include block(100%, 190px);
-        border: transparent solid 0px;
+        border: none;
         @include border-radius-shadow(nth($border, 5), 0, 0, 0, 0, 0);
         object-fit: cover;
     }

@@ -43,6 +43,6 @@
 
   &__icon {
     @include block(18px, auto);
-    @include margin-padding(auto, auto, auto, math.div($margin, 2), auto, auto, auto, auto);
+    @include margin-padding(auto, math.div($margin, 2), auto, auto, auto, auto, auto, auto);
   }
 }

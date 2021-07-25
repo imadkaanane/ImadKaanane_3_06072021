@@ -3,7 +3,7 @@ $colorPrimary: #9356DC;
 $colorSecondary: #FF79DA;
 $colorTertiary: #99E2D0;
 
-$bgLinear: linear-gradient(15deg, color.scale($colorPrimary, $alpha: -10%) 0%, color.scale($colorSecondary, $alpha: -10%) 100%);
+$bgLinear: linear-gradient(10deg, color.scale($colorPrimary, $alpha: -10%) 0%, color.scale($colorSecondary, $alpha: -10%) 100%);
 $bgButton: rgb(104, 104, 104);
 
 $bgColor: #f6f6f6;

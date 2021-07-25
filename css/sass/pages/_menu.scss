@@ -39,7 +39,7 @@
 }
   
 .submenus {
-    @include grid;
+    @include grid(1, 1rem, 0, 2, 3);
 }
   
 .submenu {
@@ -64,13 +64,13 @@
 }
   
 .menuItem {
-    @include flex(row, space-between, unset);
-    @include background($white);
-    @include border-radius-shadow(nth($border, 8), $x, $y, $blur, $color, $transition);
+    @include block(100%, auto);
     @include margin-padding($margin, 0, $margin, 0, $padding, $padding, $padding, $padding);
+    @include border-radius-shadow(nth($border, 8), $x, $y, $blur, $color, $transition);
+    @include background($white);
+    @include flex(row, space-between, unset);
     @include animation(menuAppear, 1.75s);
-    max-width: 100%;
-
+    
     &:hover {
         @include box-shadow-hover($x, $y, $blur, $color-hover, $transition-hover);
         animation-fill-mode: none;
@@ -106,7 +106,7 @@
     }
   
     &:hover &__confirmation {
-        margin-right: -$margin;
+        @include margin-padding (0, -$margin, 0, 0, 0, 0, 0, 0);
         transition-duration: .6s;
     }
   
