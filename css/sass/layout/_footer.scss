@@ -9,7 +9,7 @@
   }
   
   &__logo {
-    color: $white;
+    @include color($white);
     @include font-family($fontTitle);
     @include font-size(20px);
     @include margin-padding(0, 0, $margin, 0, auto, auto, auto, auto);
@@ -33,8 +33,7 @@
   }
 
   &__link {
-    color: $white;
-    text-decoration: none;
+    @include color($white);
 
     &:hover {
       text-decoration: underline;

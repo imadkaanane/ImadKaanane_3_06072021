@@ -6,7 +6,7 @@
     &__arrow {
         @include font-size;
         @include position(absolute, 35%, 25px); 
-        color: $black;
+        @include color($black);
     }
 }
   
@@ -47,7 +47,6 @@
     @include block (100%, auto);
     overflow: hidden;
  
-  
     &__title {
       text-transform: uppercase;
       @include font-weight;
@@ -70,6 +69,8 @@
     @include background($white);
     @include flex(row, space-between, unset);
     @include animation(menuAppear, 1.75s);
+    overflow: hidden;
+    cursor: pointer;
     
     &:hover {
         @include box-shadow-hover($x, $y, $blur, $color-hover, $transition-hover);
@@ -102,7 +103,7 @@
         @include margin-padding(-$margin, -$margin * 5, -$margin, $margin, 0, 0, 0, 0);
         @include block(64px, auto);
         @include flex(row, center, center);
-        transition-duration: .5s;
+        transition-duration: $transition;
     }
   
     &:hover &__confirmation {
@@ -116,7 +117,7 @@
         @include flex(row, center, center);
         @include border-radius-shadow(nth($border, 1), 0, 0, 0, 0, 0);
         @include transform(rotate(-180deg));
-        transition-duration: .75s;
+        transition-duration: $transition-hover;
     }
   
     &:hover &__wrapIcon {
@@ -124,7 +125,7 @@
     }
   
     &__icon {
-        color: $colorTertiary;
+        @include color($colorTertiary);
     }
 }
 

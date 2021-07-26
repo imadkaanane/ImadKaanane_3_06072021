@@ -2,14 +2,12 @@
   @include position(fixed, 0, 0);
   @include block(100%, 100%);
   @include background ($bgLoader);
-  @include animation (loader, 0.3s );
-
-  z-index: 2;
+  @include animation (loader, .15s);
   @include flex(row, center, center);
+  z-index: 2;
   
   &__item {
-    @include animation(bounce, .75s);
-    
+    @include animation(bounce, .6s);
     @include font-family($fontTitle);
 
     &Container {
@@ -23,16 +21,16 @@
     }
 
     &--1 {
-      color: $colorTertiary;
+      @include color($colorTertiary);
     }
 
     &--2 {
-      color: $colorSecondary;
+      @include color($colorSecondary);
       animation-delay: 0.25s;
     }
 
     &--3 {
-      color: $colorPrimary;
+      @include color($colorPrimary);
       animation-delay: 0.5s;
     }
   }

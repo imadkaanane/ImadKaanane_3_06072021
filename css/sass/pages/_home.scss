@@ -53,15 +53,15 @@
         }
 
         &:hover > i {
-            color: $colorPrimary;
+            @include color($colorPrimary);
         }
         &:hover > span {
-            @include font-weight;
+            @include text-hover;
         }
         
         &--number{
             @include background($colorPrimary);
-            color: $white;
+            @include color($white);
             @include border-radius-shadow(nth($border, 3), 0, 0, 0, 0, 0);
             @include margin-padding(0, 0, 0, -($margin * 2), math.div($padding, 4), math.div($padding, 2), math.div($padding, 4), math.div($padding, 2));
         }    
@@ -74,7 +74,7 @@
     &__icon {
         @include margin-padding(0, 0, 0, $margin, 0, 0, 0, 0);
         @include font-size(20px);
-        color: #444;
+        @include color($bgLocal);
     } 
 }
 
@@ -94,8 +94,7 @@
    
     @include border-radius-shadow(nth($border, 4), $x, $y, $blur, $color, $transition);
     @include position(relative, 0, 0);
-    text-decoration: none;
-    color: inherit;
+    @include color(inherit);
   
     &:hover {  
         @include box-shadow-hover($x, $y, $blur, $color-hover, $transition-hover);
@@ -110,7 +109,7 @@
 
     &__tag {
         @include background($colorTertiary);
-        color: darken($colorTertiary, 50%);
+        @include color (darken($colorTertiary, 50%));
         @include margin-padding(auto, auto, auto, auto, math.div($padding, 2), math.div($padding, 2), math.div($padding, 2), math.div($padding, 2));
         @include border-radius-shadow(nth($border, 6), 0, 0, 0, 0, 0);
         @include position-right(absolute, 16px, 12px);
@@ -132,7 +131,6 @@
     }
 
     &__title {
-        
         @include margin-padding(auto, auto, math.div($margin, 4), auto, auto, auto, auto, auto);
     }
 
