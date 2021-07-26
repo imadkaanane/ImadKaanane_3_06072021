@@ -55,35 +55,35 @@
 
     }
     &--1 {
-      background-color: $colorPrimary;
+
       @include background ($colorPrimary);
     }
     &--2 {
-      background-color: $colorSecondary;
+
       @include background ($colorSecondary);
     }
     &--3 {
-      background-color: $colorTertiary;
+
       @include background ($colorTertiary);
     }
     &--4 {
-      background-color: $transp;
+
       @include background ($transp);
     }
     &--5 {
-      background-color: $colorPrimary;
+
       @include background ($colorPrimary);
     }
     &--6 {
-      background-color: $colorSecondary;
+
       @include background ($colorSecondary);
     }
     &--7 {
-      background-color: $colorTertiary;
+
       @include background ($colorTertiary);
     }
     &--8 {
-      background-color: $transp;
+
       @include background ($transp);
     }
 

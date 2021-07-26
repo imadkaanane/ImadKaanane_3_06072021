@@ -115,9 +115,10 @@
 
 // Largeurs,  longueurs, marges....
 @mixin block($width, $height) {
-  @if $width == 100%  and ($height == 520px or $height == 195px) {
+  @if $width == 100%  and ($height == 520px or $height == 320px or $height == 195px ) {
     width: $width;
     max-height: $height;
+    min-height: $height;
   } @else if ($width == $widthContainer or $width == 100%) and $height == auto{
     max-width: $width;
     height: $height;
@@ -150,7 +151,7 @@
     -moz-box-shadow: $x $y $blur $color;
     -ms-box-shadow: $x $y $blur $color;
     box-shadow: $x $y $blur $color;
-    
+
   } @else if ($radius == nth($border, 1) or $radius ==  nth($border, 2) or $radius ==  nth($border, 4) or $radius ==  nth($border, 8)) and $x == $x and $y == $y and $blur == $blur and $color == $color and $transition == $transition {
       border-radius: $radius;
       -webkit-box-shadow: $x $y $blur $color;

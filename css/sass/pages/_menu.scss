@@ -11,8 +11,12 @@
 }
   
 .bgImg {
-    @include block(100%, 520px);
+    @include block(100%, 320px);
+    min-height: 320px;
     object-fit: cover;
+    @include tablet {
+        @include block(100%, 520px);
+    }
 }
   
 .menu {
