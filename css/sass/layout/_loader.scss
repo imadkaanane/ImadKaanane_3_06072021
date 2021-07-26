@@ -26,12 +26,12 @@
 
     &--2 {
       @include color($colorSecondary);
-      animation-delay: 0.25s;
+      animation-delay: 0.22s;
     }
 
     &--3 {
       @include color($colorPrimary);
-      animation-delay: 0.5s;
+      animation-delay: 0.44s;
     }
   }
 }

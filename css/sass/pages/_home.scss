@@ -74,7 +74,7 @@
     &__icon {
         @include margin-padding(0, 0, 0, $margin, 0, 0, 0, 0);
         @include font-size(20px);
-        @include color($bgLocal);
+        @include color($bgButton);
     } 
 }
 
@@ -94,14 +94,14 @@
    
     @include border-radius-shadow(nth($border, 4), $x, $y, $blur, $color, $transition);
     @include position(relative, 0, 0);
-    @include color(inherit);
+    @include color(unset);
   
     &:hover {  
         @include box-shadow-hover($x, $y, $blur, $color-hover, $transition-hover);
     }
 
     &__img {
-        @include block(100%, 190px);
+        @include block(100%, 195px);
         border: none;
         @include border-radius-shadow(nth($border, 5), 0, 0, 0, 0, 0);
         object-fit: cover;
@@ -131,7 +131,7 @@
     }
 
     &__title {
-        @include margin-padding(auto, auto, math.div($margin, 4), auto, auto, auto, auto, auto);
+        @include margin-padding(auto, auto, math.div($margin, 2), auto, auto, auto, auto, auto);
     }
 
 }

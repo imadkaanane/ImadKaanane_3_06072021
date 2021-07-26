@@ -6,10 +6,10 @@ button {
   cursor: pointer;
   @include border-radius-shadow(nth($border, 1), $x, $y, $blur, $color, $transition);
   @include buttonPrimary;
- 
+
   &:hover {
     @include background($white);
     @include box-shadow-hover($x, $y, $blur, $color-hover, $transition-hover);
     @include text-hover;
-  }
+  } 
 }

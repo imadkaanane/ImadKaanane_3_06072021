@@ -182,11 +182,11 @@ main {
 }
 .loader__item--2 {
   color: #FF79DA;
-  animation-delay: 0.25s;
+  animation-delay: 0.22s;
 }
 .loader__item--3 {
   color: #9356DC;
-  animation-delay: 0.5s;
+  animation-delay: 0.44s;
 }
 
 .header {
@@ -319,7 +319,7 @@ main {
   margin: 0 0 0 16px;
   padding: 0 0 0 0;
   font-size: 20px;
-  color: rgba(228, 224, 224, 0.5);
+  color: #686868;
 }
 
 .restaurants {
@@ -360,7 +360,7 @@ main {
   position: relative;
   top: 0;
   left: 0;
-  color: inherit;
+  color: unset;
 }
 .card:hover {
   -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
@@ -375,7 +375,7 @@ main {
 }
 .card__img {
   width: 100%;
-  max-height: 190px;
+  max-height: 195px;
   border: none;
   border-radius: 16px 16px 0 0;
   object-fit: cover;
@@ -410,7 +410,7 @@ main {
   padding: auto auto auto auto;
 }
 .card__title {
-  margin: auto auto 4px auto;
+  margin: auto auto 8px auto;
   padding: auto auto auto auto;
 }
 
