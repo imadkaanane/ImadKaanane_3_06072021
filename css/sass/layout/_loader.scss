@@ -20,7 +20,7 @@
       
       @include position(absolute, auto, auto);
       @include flex(row, center, center);
-      @include margin-padding($margin *2, $margin *2, $margin *2, $margin *2, auto, auto, auto, auto);
+      @include margin-padding($margin *2, $margin *2, $margin *2, $margin *2, 0, 0, 0, 0);
       @include font-size(25px); 
       
       @include tablet {

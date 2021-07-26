@@ -1,10 +1,10 @@
 .footer {
   @include background($bgFooter);
-  @include margin-padding(auto, auto, auto, auto, $padding, 0, $padding, 0);
+  @include margin-padding(0, 0, 0, 0, $padding, 0, $padding, 0);
   
   &__container {
     @include flex(column, flex-start, flex-start);
-    @include margin-padding(auto, auto, auto, auto, $padding, $padding, $padding, $padding);
+    @include margin-padding(0, auto, 0, auto, $padding, $padding, $padding, $padding);
     @include block($widthContainer, auto);
   }
   
@@ -12,7 +12,7 @@
     @include color($white);
     @include font-family($fontTitle);
     @include font-size(20px);
-    @include margin-padding(0, 0, $margin, 0, auto, auto, auto, auto);
+    @include margin-padding(0, 0, $margin, 0, 0, 0, 0, 0);
   }
 
   &__list {
@@ -20,16 +20,8 @@
     @include margin-padding(0, 0, 0, 0, 0, 0, 0, 0);
   }
 
-  &__listElement {
-    
+  &__listElement {    
     @include margin-padding((math.div($margin, 2)), 0, (math.div($margin, 2)), 0, auto, auto, auto, auto);
-    &:first-child {
-      @include margin-padding(0, auto, auto, auto, auto, auto, auto, auto);
-    }
-
-    &:last-child {
-      @include margin-padding(auto, auto, 0, auto, auto, auto, auto, auto);
-    }
   }
 
   &__link {
@@ -42,6 +34,6 @@
 
   &__icon {
     @include block(18px, auto);
-    @include margin-padding(auto, math.div($margin, 2), auto, auto, auto, auto, auto, auto);
+    @include margin-padding(0, math.div($margin, 2), 0, 0, 0, 0, 0, 0);
   }
 }

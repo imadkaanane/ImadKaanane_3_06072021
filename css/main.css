@@ -161,12 +161,12 @@ a {
 main {
   max-width: 1280px;
   height: auto;
-  margin: auto auto auto auto;
+  margin: 0 auto 0 auto;
   padding: 0 0 0 0;
 }
 
 .paddingSection {
-  margin: auto auto auto auto;
+  margin: 0 0 0 0;
   padding: 48px 16px 48px 16px;
 }
 
@@ -209,7 +209,7 @@ main {
   justify-content: center;
   align-items: center;
   margin: 32px 32px 32px 32px;
-  padding: auto auto auto auto;
+  padding: 0 0 0 0;
   font-size: 25px;
 }
 @media screen and (min-width: 768px) {
@@ -297,7 +297,7 @@ main {
 }
 
 .header {
-  margin: auto auto auto auto;
+  margin: 0 0 0 0;
   padding: 16px 16px 16px 16px;
   -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
@@ -310,12 +310,13 @@ main {
 }
 .header__logo {
   font-family: "Shrikhand", "cursive";
+  font-size: 40px;
   text-align: center;
   justify-content: center;
 }
 
 .localisation {
-  margin: auto auto auto auto;
+  margin: 0 0 0 0;
   padding: 16px 16px 16px 16px;
   background-color: rgba(228, 224, 224, 0.5);
   display: flex;
@@ -344,7 +345,7 @@ main {
   }
 }
 .description__title {
-  margin: auto auto auto auto;
+  margin: 0 0 0 0;
   padding: 16px 16px 16px 16px;
   text-align: center;
   justify-content: center;
@@ -491,7 +492,7 @@ main {
 .card__tag {
   background-color: #99E2D0;
   color: #1b6150;
-  margin: auto auto auto auto;
+  margin: 0 0 0 0;
   padding: 8px 8px 8px 8px;
   border-radius: 5px;
   position: absolute;
@@ -499,7 +500,7 @@ main {
   right: 12px;
 }
 .card__footer {
-  margin: auto auto auto auto;
+  margin: 0 0 0 0;
   padding: 16px 16px 16px 16px;
   position: relative;
   top: 0;
@@ -514,12 +515,12 @@ main {
 }
 .card__btn {
   border: none;
-  margin: 8px auto auto auto;
-  padding: auto auto auto auto;
+  margin: 8px 0 0 0;
+  padding: 0 0 0 0;
 }
 .card__title {
-  margin: auto auto 8px auto;
-  padding: auto auto auto auto;
+  margin: 0 0 8px 0;
+  padding: 0 0 0 0;
 }
 
 .header--withArrow {
@@ -551,7 +552,7 @@ main {
 }
 
 .menu {
-  margin: auto auto -48px auto;
+  margin: 0 auto -48px auto;
   padding: 0 0 0 0;
   border-radius: 32px 32px 0 0;
   background-color: #f6f6f6;
@@ -784,7 +785,7 @@ main {
 
 .footer {
   background-color: #353535;
-  margin: auto auto auto auto;
+  margin: 0 0 0 0;
   padding: 16px 0 16px 0;
 }
 .footer__container {
@@ -792,7 +793,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: auto auto auto auto;
+  margin: 0 auto 0 auto;
   padding: 16px 16px 16px 16px;
   max-width: 1280px;
   height: auto;
@@ -802,7 +803,7 @@ main {
   font-family: "Shrikhand", "cursive";
   font-size: 20px;
   margin: 0 0 16px 0;
-  padding: auto auto auto auto;
+  padding: 0 0 0 0;
 }
 .footer__list {
   list-style: none;
@@ -811,14 +812,6 @@ main {
 }
 .footer__listElement {
   margin: 8px 0 8px 0;
-  padding: auto auto auto auto;
-}
-.footer__listElement:first-child {
-  margin: 0 auto auto auto;
-  padding: auto auto auto auto;
-}
-.footer__listElement:last-child {
-  margin: auto auto 0 auto;
   padding: auto auto auto auto;
 }
 .footer__link {
@@ -830,8 +823,8 @@ main {
 .footer__icon {
   width: 18px;
   height: auto;
-  margin: auto 8px auto auto;
-  padding: auto auto auto auto;
+  margin: 0 8px 0 0;
+  padding: 0 0 0 0;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -14,9 +14,9 @@ a {
 
 main {
     @include block($widthContainer, auto);
-    @include margin-padding(auto, auto, auto, auto, 0, 0, 0, 0);
+    @include margin-padding(0, auto, 0, auto, 0, 0, 0, 0);
 }
 
 .paddingSection {
-    @include margin-padding(auto, auto, auto, auto, ($padding * 3), $padding, ($padding * 3), $padding);
+    @include margin-padding(0, 0, 0, 0, ($padding * 3), $padding, ($padding * 3), $padding);
 }
