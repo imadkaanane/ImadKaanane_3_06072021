@@ -37,7 +37,7 @@
 .working {
     &__steps {
         @include grid(1, 2rem, 2rem, 2, 3);
-        @include margin-padding(($margin * 2), 0, ($margin * 2), 0, 0, $padding, 0, $padding);
+        @include margin-padding(($margin * 2), 0, ($margin * 2), 0, 0, 0, 0, $padding);
         cursor: pointer;
     }
 

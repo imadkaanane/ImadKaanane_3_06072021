@@ -40,3 +40,6 @@ $numLoad: 10;
 $animDur: 2000ms;
 $animDelay: math.div($animDur, $numLoad);
 
+$numItems: 8;
+$animDur2: 1000ms;
+$animDelay2: math.div($animDur2, $numItems);

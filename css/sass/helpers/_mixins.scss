@@ -115,7 +115,7 @@
 
 // Largeurs,  longueurs, marges....
 @mixin block($width, $height) {
-  @if $width == 100% and ($height == 550px or $height == 195px) {
+  @if $width == 100%  and ($height == 520px or $height == 195px) {
     width: $width;
     max-height: $height;
   } @else if ($width == $widthContainer or $width == 100%) and $height == auto{
