@@ -85,7 +85,7 @@
       @include background ($transp);
     }
 
-    animation: spinner 500ms cubic-bezier(.64, .07, .44, .93) both 2.25;
+    animation: spinner 500ms both 2.25;
     @for $i from 1 through $numItems {
         &--#{$i} {
             animation-delay: $animDelay2 * $i;
