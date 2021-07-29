@@ -102,7 +102,6 @@
 @mixin back-gradient-clip {
   -webkit-background-clip: text;
   -ms-background-clip: text;
-  background-clip: text;
   color: $transp;
 }
 
@@ -139,24 +138,15 @@
 
 // Borders-radius, box-shadow, transition....
 @mixin transform($property) {
-  -webkit-transform: $property;
-  -ms-transform: $property;
-  -moz-transform: $property;
   transform: $property;
 }
 
 @mixin border-radius-shadow($radius, $x, $y, $blur, $color, $transition) {
   @if $radius == 0 and $x == $x and $y == $y and $blur == $blur and $color == $color {
-    -webkit-box-shadow: $x $y $blur $color;
-    -moz-box-shadow: $x $y $blur $color;
-    -ms-box-shadow: $x $y $blur $color;
     box-shadow: $x $y $blur $color;
 
   } @else if ($radius == nth($border, 1) or $radius ==  nth($border, 2) or $radius ==  nth($border, 4) or $radius ==  nth($border, 8)) and $x == $x and $y == $y and $blur == $blur and $color == $color and $transition == $transition {
       border-radius: $radius;
-      -webkit-box-shadow: $x $y $blur $color;
-      -moz-box-shadow: $x $y $blur $color;
-      -ms-box-shadow: $x $y $blur $color;
       box-shadow: $x $y $blur $color;
       transition-duration: $transition;
 
@@ -170,9 +160,6 @@
 }
 
 @mixin box-shadow-hover($x, $y, $blur, $color-hover, $transition-hover) {
-  -webkit-box-shadow: $x $y $blur $color-hover;
-  -moz-box-shadow: $x $y $blur $color-hover;
-  -ms-box-shadow: $x $y $blur $color-hover;
   box-shadow: $x $y $blur $color-hover;
   @include transform(scale(1.04));
   transition-duration: $transition-hover;
