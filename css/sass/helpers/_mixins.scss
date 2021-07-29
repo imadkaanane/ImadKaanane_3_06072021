@@ -22,50 +22,7 @@
   }
 }
 
-// Flexbox
 
-@mixin flex($direction, $justify, $align) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-
-// Grid system
-
-@mixin grid ($i, $column, $row, $iTab, $iDesk){
-    display: grid;
-    grid-template-columns: repeat($i, 1fr);
-    column-gap: $column;
-    row-gap: $row;
-
-    @include tablet {
-        grid-template-columns: repeat($iTab, 1fr);
-      }
-    @include desktop {
-        grid-template-columns: repeat($iDesk, 1fr);
-    } 
-}
-
-// Alignement , positon.....
-
-@mixin position ($pos, $top, $left){
-  position: $pos;
-  top: $top;
-  left: $left; 
-}
-
-@mixin position-right ($pos, $top, $right) {
-  position: $pos;
-  top: $top;
-  right: $right; 
-}
-
-@mixin text-center {
-  text-align: center;
-  justify-content: center;
-}
 
 // Colors, Background
 @mixin color($colors){
@@ -163,6 +120,50 @@
   box-shadow: $x $y $blur $color-hover;
   @include transform(scale(1.04));
   transition-duration: $transition-hover;
+}
+// Flexbox
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
+// Grid system
+
+@mixin grid ($i, $column, $row, $iTab, $iDesk){
+  display: grid;
+  grid-template-columns: repeat($i, 1fr);
+  column-gap: $column;
+  row-gap: $row;
+
+  @include tablet {
+      grid-template-columns: repeat($iTab, 1fr);
+    }
+  @include desktop {
+      grid-template-columns: repeat($iDesk, 1fr);
+  } 
+}
+
+// Alignement , positon.....
+
+@mixin position ($pos, $top, $left){
+position: $pos;
+top: $top;
+left: $left; 
+}
+
+@mixin position-right ($pos, $top, $right) {
+position: $pos;
+top: $top;
+right: $right; 
+}
+
+@mixin text-center {
+text-align: center;
+justify-content: center;
 }
 
 // Animations
