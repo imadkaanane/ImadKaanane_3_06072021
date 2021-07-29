@@ -12,7 +12,6 @@
   
 .bgImg {
     @include block(100%, 320px);
-    min-height: 320px;
     object-fit: cover;
     @include tablet {
         @include block(100%, 520px);
@@ -119,9 +118,8 @@
         @include block(26px, 26px);
         @include background($white);
         @include flex(row, center, center);
-        @include border-radius-shadow(nth($border, 1), 0, 0, 0, 0, 0);
+        @include border-radius-shadow(nth($border, 1), 0, 0, 0, 0, $transition-hover);
         @include transform(rotate(-180deg));
-        transition-duration: $transition-hover;
     }
   
     &:hover &__wrapIcon {

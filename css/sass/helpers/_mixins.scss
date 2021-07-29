@@ -182,7 +182,7 @@
 @mixin animation($anim, $dur) {
   @if $anim == loader and $dur == .15s {
     animation: $anim $dur;
-    animation-delay: 1.75s;
+    animation-delay: 2.25s;
     animation-fill-mode: both;
   } @else if $anim == bounce and $dur == .6s{
     animation: $anim $dur;

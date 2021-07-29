@@ -32,7 +32,7 @@
       opacity: 1;
   }
   4% {
-      transform: rotate(0deg);
+      @include transform (rotate(0deg));
   }
   90% {
       opacity: 0.8;
@@ -48,7 +48,25 @@
   }
   100% {
       opacity: 0;
-      transform: rotate(360deg);
+      @include transform(rotate(360deg));
+  }
+}
+
+@keyframes colorIcon {
+  0%{
+   @include color($colorPrimary);
+  }
+  44%{
+    @include color($colorSecondary);
+  }
+  66%{
+    @include color($colorTertiary);
+  }
+  88%{
+    @include color($colorPrimary);
+  }
+  100%{
+    @include color($colorSecondary);
   }
 }
 

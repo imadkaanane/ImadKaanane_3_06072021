@@ -21,8 +21,7 @@
       @include position(absolute, auto, auto);
       @include flex(row, center, center);
       @include margin-padding($margin *2, $margin *2, $margin *2, $margin *2, 0, 0, 0, 0);
-      @include font-size(25px); 
-      
+      @include font-size(35px);  
       @include tablet {
         @include font-size(50px);
       }
@@ -44,14 +43,14 @@
   }
 
   &__loading {
-    @include block (85px, 34px);
-    @include position(absolute, -105px, -45px);
+    @include block (12px, 12px);
+    @include position(absolute, 40px, -23px);
     @include border-radius-shadow(nth($border, 3), 0, 0, 0, 0, 0);
     transform-origin: 50% 300%;
     @include tablet {
 
-      @include block (170px, 68px);
-      @include position(absolute, -210px, -90px);
+      @include block (20px, 20px);
+      @include position(absolute, 50px, -32px);
 
     }
     &--1 {
@@ -87,11 +86,21 @@
       @include background ($transp);
     }
 
-    animation: spinner 800ms cubic-bezier(.64, .07, .44, .93) both 2;
+    animation: spinner 500ms cubic-bezier(.64, .07, .44, .93) both 2.25;
     @for $i from 1 through $numItems {
         &--#{$i} {
             animation-delay: $animDelay2 * $i;
         }
+    }
+  }
+
+  &__icon {
+    @include font-size(23px);
+    @include position(absolute, 63px, -30px);
+    animation: colorIcon 2.25s ease-in-out;
+    @include tablet {
+      @include font-size(35px);
+      @include position(absolute, 90px,-36px);
     }
   }
 

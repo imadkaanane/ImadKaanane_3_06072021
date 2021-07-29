@@ -21,7 +21,7 @@
   }
 
   &__listElement {    
-    @include margin-padding((math.div($margin, 2)), 0, (math.div($margin, 2)), 0, auto, auto, auto, auto);
+    @include margin-padding((math.div($margin, 2)), 0, (math.div($margin, 2)), 0, 0, 0, 0, 0);
   }
 
   &__link {
