@@ -91,6 +91,33 @@
     transform: scale(1);
   }
 }
+* {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  max-width: 1280px;
+  height: auto;
+  margin: 0 auto 0 auto;
+  padding: 0 0 0 0;
+}
+
+.paddingSection {
+  margin: 0 0 0 0;
+  padding: 48px 16px 48px 16px;
+}
+
 button {
   font-weight: 500;
   font-size: 18px;
@@ -126,33 +153,6 @@ button:hover {
   -ms-background-clip: text;
   color: transparent;
   font-weight: bold;
-}
-
-* {
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  box-sizing: border-box;
-}
-
-body, html {
-  font-family: "Roboto", sans-serif;
-  scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-}
-
-main {
-  max-width: 1280px;
-  height: auto;
-  margin: 0 auto 0 auto;
-  padding: 0 0 0 0;
-}
-
-.paddingSection {
-  margin: 0 0 0 0;
-  padding: 48px 16px 48px 16px;
 }
 
 .loader {

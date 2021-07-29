@@ -1,17 +1,17 @@
-@use "sass:math";
 @use "sass:color";
+@use "sass:math";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 @import 'sass/helpers/variables';
 @import 'sass/helpers/maps';
 @import 'sass/helpers/mixins';
 @import 'sass/helpers/keyframes';
+@import 'sass/bases/reset';
 @import 'sass/components/buttons';
 @import 'sass/components/heartIcon';
-@import 'sass/bases/reset';
 @import 'sass/layout/loader';
 @import 'sass/layout/header';
 @import 'sass/pages/home';
-@import 'sass/pages/menu';
+@import'sass/pages/menu';
 @import 'sass/layout/footer';
 
 
