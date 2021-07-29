@@ -127,9 +127,7 @@
 
     &__btn {
         border: none;
-        @include margin-padding((math.div($margin, 2)), 0, 0, 0, 0, 0, 0, 0);
-        
-        
+        @include margin-padding((math.div($margin, 2)), 0, 0, 0, 0, 0, 0, 0);   
     }
 
     &__title {

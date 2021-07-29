@@ -44,13 +44,12 @@
 
   &__loading {
     @include block (12px, 12px);
-    @include position(absolute, 40px, -23px);
+    @include position(absolute, 40px, -5px);
     @include border-radius-shadow(nth($border, 3), 0, 0, 0, 0, 0);
     transform-origin: 50% 300%;
     @include tablet {
-
       @include block (20px, 20px);
-      @include position(absolute, 50px, -32px);
+      @include position(absolute, 50px, -10px);
 
     }
     &--1 {
@@ -96,11 +95,11 @@
 
   &__icon {
     @include font-size(23px);
-    @include position(absolute, 63px, -30px);
+    @include position(absolute, 63px, -10px);
     animation: colorIcon 2.25s ease-in-out;
     @include tablet {
       @include font-size(35px);
-      @include position(absolute, 90px,-36px);
+      @include position(absolute, 90px,-15px);
     }
   }
 
