@@ -5,97 +5,15 @@
   }
 } 
 
-@keyframes bounce {
-  0% {
-    @include transform (translateY(0));
-  }
-  25% {
-    @include transform (translateY(24px));
-  }
-  75% {
-    @include transform (translateY(-24px));
-  }
-  100% {
-    @include transform (translateY(0));
-  }
 
-}
 
-@keyframes spinner {
-  0% {
-      opacity: 0.2;
-  }
-  1% {
-      opacity: 0.6;
-  }
-  2% {
-      opacity: 1;
-  }
-  4% {
-      @include transform (rotate(0deg));
-  }
-  90% {
-      opacity: 0.8;
-  }
-  92% {
-      opacity: 0.7;
-  }
-  95% {
-      opacity: 0.5;
-  }
-  97% {
-      opacity: 0.2;
-  }
-  100% {
-      opacity: 0;
-      @include transform(rotate(360deg));
-  }
-}
 
-@keyframes colorIcon {
-  0%{
-   @include color($colorPrimary);
-  }
-  44%{
-    @include color($colorSecondary);
-  }
-  66%{
-    @include color($colorTertiary);
-  }
-  88%{
-    @include color($colorPrimary);
-  }
-  100%{
-    @include color($colorSecondary);
-  }
-}
 
-@keyframes arise {
-  0% {
-    opacity: 0;
-  }
-  25% {
-      opacity: 0.25;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-      opacity: 0.75;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
-@keyframes menuAppear {
-    0% {
-      @include transform (scale(0));
-    }
-    100% {
-      @include transform (scale(1));
-    }
-}
+
+
+
+
 
 
 

@@ -175,13 +175,113 @@ justify-content: center;
     animation-delay: 2.25s;
     animation-fill-mode: both;
   } @else if $anim == bounce and $dur == .6s{
+    @keyframes bounce {
+      0% {
+        @include transform (translateY(0));
+      }
+      25% {
+        @include transform (translateY(24px));
+      }
+      75% {
+        @include transform (translateY(-24px));
+      }
+      100% {
+        @include transform (translateY(0));
+      }
+    
+    }
     animation: $anim $dur;
     animation-iteration-count: 2;
-  } @else if $anim == arise and $dur == .6s {
+  } @else if $anim == spinner and $dur == .5s{
+    @keyframes spinner {
+      0% {
+          opacity: 0.2;
+      }
+      1% {
+          opacity: 0.6;
+      }
+      2% {
+          opacity: 1;
+      }
+      4% {
+          @include transform (rotate(0deg));
+      }
+      90% {
+          opacity: 0.8;
+      }
+      92% {
+          opacity: 0.7;
+      }
+      95% {
+          opacity: 0.5;
+      }
+      97% {
+          opacity: 0.2;
+      }
+      100% {
+          opacity: 0;
+          @include transform(rotate(360deg));
+      }
+    }
+      animation: $anim $dur;
+      animation-delay: 2.25s;
+      animation-fill-mode: both;
+      @for $i from 1 through $numItems {
+        &--#{$i} {
+            animation-delay: $animDelay2 * $i;
+        }
+    }
+   
+  }@else if $anim ==  colorIcon and $dur == 2.25s {
+    @keyframes colorIcon {
+      0%{
+       @include color($colorPrimary);
+      }
+      44%{
+        @include color($colorSecondary);
+      }
+      66%{
+        @include color($colorTertiary);
+      }
+      88%{
+        @include color($colorPrimary);
+      }
+      100%{
+        @include color($colorSecondary);
+      }
+    }
+    animation: $anim $dur;
+    animation-fill-mode: ease-in-out;
+  }@else if $anim == arise and $dur == .6s {
+    @keyframes arise {
+      0% {
+        opacity: 0;
+      }
+      25% {
+          opacity: 0.25;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      75% {
+          opacity: 0.75;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
     animation: $anim $dur;
     opacity: 1;
     @include transform(scale(1.1));
   } @else if $anim == menuAppear and $dur == 1.75s {
+      @keyframes menuAppear {
+        0% {
+          @include transform (scale(0));
+        }
+        100% {
+          @include transform (scale(1));
+        }
+    }
     animation: $anim $dur;
     animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
     animation-fill-mode: both;

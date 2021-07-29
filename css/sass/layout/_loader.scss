@@ -85,18 +85,14 @@
       @include background ($transp);
     }
 
-    animation: spinner 500ms both 2.25;
-    @for $i from 1 through $numItems {
-        &--#{$i} {
-            animation-delay: $animDelay2 * $i;
-        }
-    }
+    @include animation(spinner, .5s);
+    
   }
 
   &__icon {
     @include font-size(23px);
     @include position(absolute, 63px, -10px);
-    animation: colorIcon 2.25s ease-in-out;
+    @include animation(colorIcon, 2.25s);
     @include tablet {
       @include font-size(35px);
       @include position(absolute, 90px,-15px);
