@@ -6,10 +6,10 @@ $colorTertiary: #99E2D0;
 $bgLinear: linear-gradient(10deg, color.scale($colorPrimary, $alpha: -10%) 0%, color.scale($colorSecondary, $alpha: -10%) 100%);
 $bgButton: rgb(104, 104, 104);
 
-$bgColor: #f6f6f6;
-$bgLoader: rgba(255, 255, 255, 0.90);
+$bgColor: rgba(246, 246, 246, 1);
+$bgLoader: rgba(246, 246, 246, 0.7);
 $bgLocal: rgba(228, 224, 224, 0.5); 
-$bgFooter: #353535;
+$bgFooter: rgba(53, 53, 53, 1);
 $white: #fff;
 $black: #000000;
 $transp: transparent;

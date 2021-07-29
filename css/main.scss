@@ -4,16 +4,17 @@
 @import 'sass/helpers/variables';
 @import 'sass/helpers/maps';
 @import 'sass/helpers/mixins';
-
-@import 'sass/bases/reset';
 @import 'sass/helpers/keyframes';
-@import 'sass/layout/loader';
-@import 'sass/layout/header';
+@import 'sass/bases/reset';
 @import 'sass/components/buttons';
 @import 'sass/components/heartIcon';
+@import 'sass/layout/loader';
+@import 'sass/layout/header';
 @import 'sass/pages/home';
-@import'sass/pages/menu';
 @import 'sass/layout/footer';
+
+@import'sass/pages/menu';
+
 
 
 
