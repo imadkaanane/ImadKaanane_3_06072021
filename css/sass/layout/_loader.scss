@@ -3,7 +3,7 @@
   @include block(100%, 100%);
   @include background ($bgLoader);
   @include flex(row, center, center);
-  @include animation (loader, .15s);
+  @include animation (loader, .1s);
   z-index: 2;
   
   &__spinner{
@@ -92,7 +92,7 @@
   &__icon {
     @include font-size(23px);
     @include position(absolute, 63px, -10px);
-    @include animation(colorIcon, 2.5s);
+    @include animation(colorIcon, 2.25s);
     @include tablet {
       @include font-size(35px);
       @include position(absolute, 90px,-15px);

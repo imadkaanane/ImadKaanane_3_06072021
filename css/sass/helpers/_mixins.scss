@@ -149,127 +149,26 @@ justify-content: center;
 
 // Animations
 @mixin animation($anim, $dur) {
-  @if $anim == loader and $dur == .15s {
-    @keyframes loader {
-      100% {
-      @include opacity(0);
-      z-index: -10;
-      }
-    } 
-    
-    animation: $anim $dur;
-    animation-delay: 2.25s;
-    animation-fill-mode: both;
+  @if $anim == loader and $dur == .1s {
+    animation: $anim $dur 2s both;
   } @else if $anim == bounce and $dur == .6s{
-    @keyframes bounce {
-      0% {
-        @include transform (translateY(0));
-      }
-      25% {
-        @include transform (translateY(24px));
-      }
-      75% {
-        @include transform (translateY(-24px));
-      }
-      100% {
-        @include transform (translateY(0));
-      }
-    
-    }
-    animation: $anim $dur;
-    animation-iteration-count: 2;
+    animation: $anim $dur 2;
   } @else if $anim == spinner and $dur == .5s{
-    @keyframes spinner {
-      0% {
-        @include  opacity (0.2);
-      }
-      1% {
-        @include  opacity (0.6);
-      }
-      2% {
-        @include  opacity (0.1);
-      }
-      4% {
-          @include transform (rotate(0deg));
-      }
-      90% {
-        @include  opacity (0.8);
-      }
-      92% {
-        @include  opacity (0.7);
-      }
-      95% {
-        @include  opacity (0.5);
-      }
-      97% {
-        @include  opacity (0.2);
-      }
-      100% {
-        @include  opacity (0);
-          @include transform(rotate(360deg));
-      }
-    }
       animation: $anim $dur both 2;
-
       @for $i from 1 through $numItems {
         &--#{$i} {
-            animation-delay: $animDelay2 * $i;
+          animation-delay: $animDelay2 * $i;
         }
-    }
+      }
    
-  }@else if $anim ==  colorIcon and $dur == 2.5s {
-    @keyframes colorIcon {
-      0%{
-       @include color($colorTertiary);
-      }
-      44%{
-        @include color($colorSecondary);
-      }
-      66%{
-        @include color($colorPrimary);
-      }
-      88%{
-        @include color($colorSecondary);
-      }
-      100%{
-        @include color($colorTertiary);
-      }
-    }
-    animation: $anim $dur;
-    
-  }@else if $anim == arise and $dur == .6s {
-    @keyframes arise {
-      0% {
-        @include  opacity (0);
-      }
-      25% {
-        @include  opacity (0.25);
-      }
-      50% {
-        @include  opacity (0.5);
-      }
-      75% {
-        @include  opacity (0.75);
-      }
-      100% {
-        @include  opacity (1);
-      }
-    }
-    animation: $anim $dur;
-    opacity: 1;
-    @include transform(scale(1.1));
+  } @else if $anim ==  colorIcon and $dur == 2.25s {
+      animation: $anim $dur;
+  } @else if $anim == arise and $dur == .6s {
+      animation: $anim $dur;
+      @include opacity(1);
+      @include transform(scale(1.1));
   } @else if $anim == menuAppear and $dur == 1.75s {
-      @keyframes menuAppear {
-        0% {
-          @include transform (scale(0));
-        }
-        100% {
-          @include transform (scale(1));
-        }
-    }
-    animation: $anim $dur;
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-    animation-fill-mode: both;
+      animation: $anim $dur cubic-bezier(.5,1.58,.34,.82) both;
   }
 }
 

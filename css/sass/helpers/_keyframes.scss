@@ -1,0 +1,99 @@
+@keyframes loader {
+    100% {
+    @include opacity(0);
+    z-index: -10;
+    }
+} 
+
+@keyframes bounce {
+    0% {
+      @include transform (translateY(0));
+    }
+    25% {
+      @include transform (translateY(24px));
+    }
+    75% {
+      @include transform (translateY(-24px));
+    }
+    100% {
+      @include transform (translateY(0));
+    }
+  
+}
+
+@keyframes spinner {
+    0% {
+      @include  opacity (0.2);
+    }
+    1% {
+      @include  opacity (0.6);
+    }
+    2% {
+      @include  opacity (0.1);
+    }
+    4% {
+        @include transform (rotate(0deg));
+    }
+    90% {
+      @include  opacity (0.8);
+    }
+    92% {
+      @include  opacity (0.7);
+    }
+    95% {
+      @include  opacity (0.5);
+    }
+    97% {
+      @include  opacity (0.2);
+    }
+    100% {
+      @include  opacity (0);
+        @include transform(rotate(360deg));
+    }
+}
+
+@keyframes colorIcon {
+    0%{
+     @include color($colorTertiary);
+    }
+    44%{
+      @include color($colorPrimary);
+    }
+    66%{
+      @include color($colorSecondary);
+    }
+    88%{
+      @include color($colorPrimary);
+    }
+    100%{
+      @include color($colorTertiary);
+    }
+}
+
+@keyframes arise {
+    0% {
+      @include  opacity (0);
+    }
+    25% {
+      @include  opacity (0.25);
+    }
+    50% {
+      @include  opacity (0.5);
+    }
+    75% {
+      @include  opacity (0.75);
+    }
+    100% {
+      @include  opacity (1);
+    }
+}
+
+@keyframes menuAppear {
+    0% {
+      @include transform (scale(0));
+    }
+    100% {
+      @include transform (scale(1));
+    }
+}
+

@@ -1,0 +1,45 @@
+.card {
+   
+    @include border-radius-shadow(nth($border, 4), $x, $y, $blur, $color, $transition);
+    @include position(relative, 0, 0);
+    @include color(unset);
+  
+    &:hover {  
+        @include box-shadow-hover($x, $y, $blur, $color-hover, $transition-hover);
+    }
+
+    &__img {
+        @include block(100%, 195px);
+        border: none;
+        @include border-radius-shadow(nth($border, 5), 0, 0, 0, 0, 0);
+        object-fit: cover;
+    }
+
+    &__tag {
+        @include background($colorTertiary);
+        @include color (darken($colorTertiary, 50%));
+        @include margin-padding(0, 0, 0, 0, math.div($padding, 2), math.div($padding, 2), math.div($padding, 2), math.div($padding, 2));
+        @include border-radius-shadow(nth($border, 6), 0, 0, 0, 0, 0);
+        @include position-right(absolute, 16px, 12px);
+    }
+
+    &__footer {
+        @include margin-padding(0, 0, 0, 0, $padding, $padding, $padding, $padding);
+        @include position(relative, 0, 0);
+        @include flex(row, flex-start, center);
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__btn {
+        border: none;
+        @include margin-padding((math.div($margin, 2)), 0, 0, 0, 0, 0, 0, 0);   
+    }
+
+    &__title {
+        @include margin-padding(0, 0, math.div($margin, 2), 0, 0, 0, 0, 0);
+    }
+
+}
