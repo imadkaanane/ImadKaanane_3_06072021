@@ -24,7 +24,7 @@ $widthContainer: 1280px;
 $fontTitle: "Shrikhand", "cursive";
 $fontText: 'Roboto', sans-serif;
 
-// Borders
+// Borders et box-shadow
 $border: 100px, 20px, 50%, 16px, 16px 16px 0 0, 5px, 32px 32px 0 0,  12px;
 
 $x: 4px;
@@ -43,3 +43,11 @@ $animDelay: math.div($animDur, $numLoad);
 $numItems: 8;
 $animDur2: 1000ms;
 $animDelay2: math.div($animDur2, $numItems);
+
+// Breakpoints
+$breakpoints: (
+        tablet: 768px,
+        medium: 1024px,
+        desktop: 1280px,
+        large: 1600px,
+);

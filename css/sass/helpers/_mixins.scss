@@ -1,28 +1,3 @@
-// Media Queries
-
-@mixin tablet {
-  @media screen and (min-width:map-get($breakpoints, tablet)){
-    @content;
-  }
-}
-@mixin desktop {
-  @media screen and (min-width:map-get($breakpoints, desktop)){
-    @content;
-  }
-}
-@mixin large {
-  @media screen and (min-width:map-get($breakpoints, large)){
-    @content;
-  }
-}
-
-@mixin medium {
-  @media screen and (min-width: map-get($breakpoints, medium)) {
-    @content;
-  }
-}
-
-
 
 // Colors, Background
 @mixin color($colors){
@@ -143,6 +118,10 @@ justify-content: center;
   transform: $property;
 }
 
+@mixin opacity($value) {
+  opacity: $value;
+}
+
 @mixin border-radius-shadow($radius, $x, $y, $blur, $color, $transition) {
   @if $radius == 0 and $x == $x and $y == $y and $blur == $blur and $color == $color {
     box-shadow: $x $y $blur $color;
@@ -171,6 +150,13 @@ justify-content: center;
 // Animations
 @mixin animation($anim, $dur) {
   @if $anim == loader and $dur == .15s {
+    @keyframes loader {
+      100% {
+      @include opacity(0);
+      z-index: -10;
+      }
+    } 
+    
     animation: $anim $dur;
     animation-delay: 2.25s;
     animation-fill-mode: both;
@@ -195,36 +181,36 @@ justify-content: center;
   } @else if $anim == spinner and $dur == .5s{
     @keyframes spinner {
       0% {
-          opacity: 0.2;
+        @include  opacity (0.2);
       }
       1% {
-          opacity: 0.6;
+        @include  opacity (0.6);
       }
       2% {
-          opacity: 1;
+        @include  opacity (0.1);
       }
       4% {
           @include transform (rotate(0deg));
       }
       90% {
-          opacity: 0.8;
+        @include  opacity (0.8);
       }
       92% {
-          opacity: 0.7;
+        @include  opacity (0.7);
       }
       95% {
-          opacity: 0.5;
+        @include  opacity (0.5);
       }
       97% {
-          opacity: 0.2;
+        @include  opacity (0.2);
       }
       100% {
-          opacity: 0;
+        @include  opacity (0);
           @include transform(rotate(360deg));
       }
     }
       animation: $anim $dur;
-      animation-delay: 2.25s;
+      animation-delay: 2.75s;
       animation-fill-mode: both;
       @for $i from 1 through $numItems {
         &--#{$i} {
@@ -251,23 +237,23 @@ justify-content: center;
       }
     }
     animation: $anim $dur;
-    animation-fill-mode: ease-in-out;
+    animation-timing-function: ease-in-out;
   }@else if $anim == arise and $dur == .6s {
     @keyframes arise {
       0% {
-        opacity: 0;
+        @include  opacity (0);
       }
       25% {
-          opacity: 0.25;
+        @include  opacity (0.25);
       }
       50% {
-        opacity: 0.5;
+        @include  opacity (0.5);
       }
       75% {
-          opacity: 0.75;
+        @include  opacity (0.75);
       }
       100% {
-        opacity: 1;
+        @include  opacity (1);
       }
     }
     animation: $anim $dur;
@@ -285,6 +271,30 @@ justify-content: center;
     animation: $anim $dur;
     animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
     animation-fill-mode: both;
+  }
+}
+
+// Media Queries
+
+@mixin tablet {
+  @media screen and (min-width:map-get($breakpoints, tablet)){
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width:map-get($breakpoints, desktop)){
+    @content;
+  }
+}
+@mixin large {
+  @media screen and (min-width:map-get($breakpoints, large)){
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (min-width: map-get($breakpoints, medium)) {
+    @content;
   }
 }
 

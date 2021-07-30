@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
-@keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
 * {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
@@ -102,6 +96,12 @@ button:hover {
   animation-fill-mode: both;
   z-index: 2;
 }
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 .loader__spinner {
   position: relative;
   top: 0;
@@ -167,7 +167,7 @@ button:hover {
   border-radius: 50%;
   transform-origin: 50% 300%;
   animation: spinner 0.5s;
-  animation-delay: 2.25s;
+  animation-delay: 2.75s;
   animation-fill-mode: both;
 }
 @media screen and (min-width: 768px) {
@@ -211,7 +211,7 @@ button:hover {
     opacity: 0.6;
   }
   2% {
-    opacity: 1;
+    opacity: 0.1;
   }
   4% {
     transform: rotate(0deg);
@@ -263,7 +263,7 @@ button:hover {
   top: 63px;
   left: -10px;
   animation: colorIcon 2.25s;
-  animation-fill-mode: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 @keyframes colorIcon {
   0% {
