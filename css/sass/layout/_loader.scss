@@ -66,23 +66,23 @@
     }
     &--4 {
 
-      @include background ($transp);
+      @include background ($colorPrimary);
     }
     &--5 {
 
-      @include background ($colorPrimary);
+      @include background ($colorSecondary);
     }
     &--6 {
 
-      @include background ($colorSecondary);
+      @include background ($colorTertiary);
     }
     &--7 {
 
-      @include background ($colorTertiary);
+      @include background ($colorPrimary);
     }
     &--8 {
 
-      @include background ($transp);
+      @include background ($colorSecondary);
     }
 
     @include animation(spinner, .5s);
@@ -92,7 +92,7 @@
   &__icon {
     @include font-size(23px);
     @include position(absolute, 63px, -10px);
-    @include animation(colorIcon, 2.25s);
+    @include animation(colorIcon, 2.5s);
     @include tablet {
       @include font-size(35px);
       @include position(absolute, 90px,-15px);

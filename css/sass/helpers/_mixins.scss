@@ -209,35 +209,34 @@ justify-content: center;
           @include transform(rotate(360deg));
       }
     }
-      animation: $anim $dur;
-      animation-delay: 2.75s;
-      animation-fill-mode: both;
+      animation: $anim $dur both 2;
+
       @for $i from 1 through $numItems {
         &--#{$i} {
             animation-delay: $animDelay2 * $i;
         }
     }
    
-  }@else if $anim ==  colorIcon and $dur == 2.25s {
+  }@else if $anim ==  colorIcon and $dur == 2.5s {
     @keyframes colorIcon {
       0%{
-       @include color($colorPrimary);
+       @include color($colorTertiary);
       }
       44%{
         @include color($colorSecondary);
       }
       66%{
-        @include color($colorTertiary);
-      }
-      88%{
         @include color($colorPrimary);
       }
-      100%{
+      88%{
         @include color($colorSecondary);
+      }
+      100%{
+        @include color($colorTertiary);
       }
     }
     animation: $anim $dur;
-    animation-timing-function: ease-in-out;
+    
   }@else if $anim == arise and $dur == .6s {
     @keyframes arise {
       0% {
