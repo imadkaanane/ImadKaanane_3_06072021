@@ -364,29 +364,12 @@ main {
 }
 .card__btn {
   border: none;
-  margin: 8px 0 0 0;
+  margin: 5.3333333333px 0 0 0;
   padding: 0 0 0 0;
 }
 .card__title {
   margin: 0 0 8px 0;
   padding: 0 0 0 0;
-}
-
-.submenus {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  column-gap: 1rem;
-  row-gap: 0;
-}
-@media screen and (min-width: 768px) {
-  .submenus {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 1280px) {
-  .submenus {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .submenu {
@@ -727,6 +710,23 @@ main {
 }
 .menu__btn {
   margin-right: 16px;
+}
+
+.submenus {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 1rem;
+  row-gap: 0;
+}
+@media screen and (min-width: 768px) {
+  .submenus {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .submenus {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .wrapBtn {

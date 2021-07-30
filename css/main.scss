@@ -1,7 +1,7 @@
 @use "sass:color";
 @use "sass:math";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
-@import "sass/helpers/variables", "sass/helpers/mixins", "sass/helpers/keyframes";
+@import "sass/helpers/variables", "sass/helpers/mixins", "sass/helpers/keyframes", "sass/helpers/breakpoints";
 @import "sass/bases/base";
 @import "sass/layout/loader", "sass/layout/header", "sass/layout/footer", "sass/layout/cards", "sass/layout/menu";
 @import "sass/pages/home", "sass/pages/restaurants";
