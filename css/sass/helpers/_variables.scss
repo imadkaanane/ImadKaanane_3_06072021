@@ -37,10 +37,10 @@ $transition-hover: .75s;
 
 // Animations
 $numLoad: 10;
-$animDur: 2000ms;
+$animDur: 2s;
 $animDelay: math.div($animDur, $numLoad);
 
 $numItems: 8;
-$animDur2: 1000ms;
+$animDur2: 1s;
 $animDelay2: math.div($animDur2, $numItems);
 
